@@ -1,0 +1,30 @@
+package _15StaticKeyword;
+
+class Mobile
+{
+	int price;
+	String brand;
+	String name;
+	
+	public void view()
+	{
+		
+	}
+}
+public class Demo {
+	public static void main(String []a)
+	{
+		Mobile obj1 = new Mobile();
+		obj1.name = "Apple";
+		obj1.brand = "SmartPhone";
+		obj1.price = 5000;
+		
+		Mobile obj2 = new Mobile();
+		obj2.name = "Samsung";
+		obj2.brand = "SmartPhone";
+		obj2.price = 4000;
+		
+		
+	}
+
+}

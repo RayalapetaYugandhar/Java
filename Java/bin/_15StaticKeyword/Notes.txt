@@ -1,0 +1,34 @@
+
+
+ static String name;   /*If we use 'static' to the 'name' Variable, it means name variable is common to all objects*/
+ 
+ obj1.name="phone"; /*Here we are trying to assign 'phone' to name variable*/
+			
+			/*Here we are trying to assign 'phone' to name variable which is present in obj1, But it changed value to obj2 as well*/
+			
+		Why because static variable will be Shared by all the objects.
+		
+		Basically will not be having individual static variable for every object.
+		
+		We have a common variable which will be used by all objects. 
+		
+								name
+								 |
+								 |
+							------------
+							|          |
+							|	       |
+						--------     ---------
+						  101          103
+						-------      --------
+						
+		Here we have common variable, which will be used by all the objects.
+		
+		If we change the value of "name" it will effect the all objects.					
+		
+		
+		// Refer Demo2
+		
+		name is the static variable and it is common for all the objects and that's why we can call 'name' with the class name it self.
+		
+		In Non static method we can use static variable there is no horm.  	

@@ -1,0 +1,15 @@
+package _14_1_StringBuffer;
+
+public class Demo {
+	public static void main(String []a)
+	{
+		StringBuffer sb = new StringBuffer();
+		
+		System.out.println(sb.capacity());
+	}
+
+}
+
+
+/*String Buffer will give you the size of the buffer, which is 16 bytes */
+
