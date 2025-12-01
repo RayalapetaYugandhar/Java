@@ -1,0 +1,24 @@
+
+Command to push changes in GitHub after 1 commit
+
+git add .
+git commit -m "merged data"
+git pull origin main --no-rebase
+git push origin main
+
+
+////////////////////
+
+taking latest pull 
+
+1. git stash
+2. git pull origin main
+3. git stash pop
+
+///////////////////////////////
+Command to merge changes
+
+1. git add .
+2. git commit -m "my local changes"
+3. git pull origin main
+4. git push origin main
