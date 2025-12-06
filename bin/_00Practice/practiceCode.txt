@@ -1,0 +1,347 @@
+//======================================
+public class ReverseString {
+    public static void main(String []args) {
+        String str = "Yugandhar";
+        char[] reverseString = str.toCharArray();
+        for(int i=reverseString.length-1; i>=0; i--){
+            System.out.print(reverseString[i]);
+        }
+        
+    }
+}
+
+//==============================
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String input = "Hello World";        
+        // Method 1: Using StringBuilder
+        String reversed = new StringBuilder(input).reverse().toString();
+        System.out.println("Reversed (StringBuilder): " + reversed);
+
+    }
+}
+
+//===============================
+
+public class starPattern {
+    public static void main(String []args) {
+        // int row =5;
+        for(int i=1; i<=5; i++){
+            for(int j = 0; j<i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+////===================================
+
+public class starPatternReverse {
+    public static void main(String []args) {
+        for(int i=5; i>=0; i--){
+            for(int j = 0; j<i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+//===================================
+
+public class RemoveSubString {
+	public static void main(String []args) {
+		String str = "Yugandhar";
+		
+		str = str.replace("ga", "");
+		
+		System.out.println(str);
+	}
+}
+
+//=======================
+
+public class AddSubString {
+	public static void main(String []args) {
+		String str = "Yugandhar";
+		
+		str = str + " Babu";
+		
+		System.out.println(str);
+	}
+}
+//==========================
+
+public class SingleArray {
+	public static void main(String []args) {
+		int num[] = {1,2,4,6,7};
+		System.out.println(num[2]);
+		 num[2] = 39;
+		System.out.println(num[2]);
+	}
+}
+//=================================
+
+public class MultiDimentionalArray {
+	public static void main(String []args) {
+		int num[] [] = new int[3][6];
+		for(int i=0; i<=2; i++){
+		    for(int j=0; j<=5; j++) {
+		        num[i][j] = (int) (Math.random() *
+		        10);
+		    }
+		
+		}
+        for(int i=0; i<=2; i++){
+		    for(int j=0; j<=5; j++) {
+		        System.out.print(num[i][j] + " ");
+		    }
+		    System.out.println();
+        }
+	}
+}
+//======================================
+
+public class MultiDimentionalArray {
+    public static void main(String []args) {
+        int num[] [] = new int [3] [5];
+        
+        for(int i=0; i<=2; i++) {
+            for(int j=0; j<=4; j++) {
+                num[i][j] = (int) (Math.random() * 10);
+                
+                System.out.print(num[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+//=======================================
+
+
+public class StringBufer {
+	public static void main(String []args) {
+		StringBuffer sb = new StringBuffer("Yugandhar");
+		
+		System.out.println(sb);
+		
+		System.out.println(sb.length());
+		
+		System.out.println(sb.capacity());
+		
+		sb.append(" Babu");
+		System.out.println(sb);
+		
+		sb.insert(0, "Rayalapeta ");
+		System.out.println(sb);
+		
+		sb.deleteCharAt(20);
+		System.out.println(sb);
+		
+		sb.setLength(30);
+		System.out.println(sb);
+		
+		sb.ensureCapacity(40);
+		System.out.println(sb);
+		
+	}
+}
+
+//=========================================
+//Static variable
+
+class Mobile {
+    int price;
+    String name;
+    static String brand; 
+    
+    public void show() {
+        System.out.println(name + ":" + brand + ":" + price);
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {	        
+
+        Mobile Mob1 = new Mobile();
+        Mob1.price = 2000;
+        Mob1.name = "Moto";
+
+        Mobile Mob2 = new Mobile();
+        Mob2.price = 3000;
+        Mob2.name = "Samsung";
+		
+		Mobile.brand = "SmartPhone"; 
+
+        Mob1.show(); // Output: Moto:SmartPhone:2000
+        Mob2.show(); // Output: Samsung:SmartPhone:3000
+    }
+}
+
+//=================================
+// Setter and Getter
+
+class Setter {
+    private int value;
+    
+    public void setValue(int x){
+        value = x;
+    }
+
+    public int getValue(){
+        return value;
+    }
+}
+
+public class Getter {
+    public static void main(String[] args) {
+        Setter st = new Setter();
+        st.setValue(10);
+
+        System.out.println(st.getValue()); // Output: 10
+    }       
+}
+//===============================================
+//Overriding
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal is sounding...");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is making noise...");
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Animal ani = new Animal();
+        Dog dog = new Dog();
+        
+        ani.makeSound();     // Animal's version
+        dog.makeSound();     // Dog's version
+        
+        Animal anidog = new Dog(); // Polymorphism
+        anidog.makeSound();  // Dog's version due to dynamic method dispatch
+    }
+}
+
+//============================================
+//MethodOverLoading
+
+class MethodOverLoading {
+    public int add(int n1, int n2) {
+        return n1 + n2;
+    }
+
+    public int add(int n1, int n2, int n3) {
+        return n1 + n2 + n3;
+    }
+
+    public double add(double n4, int n2, int n3) {
+        return n4 + n2 + n3;
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        int n1 = 2;
+        int n2 = 4;
+        int n3 = 8;
+        double n4 = 3.4;
+
+        MethodOverLoading method = new MethodOverLoading();
+
+        int results = method.add(n1, n2);
+        System.out.println(results);
+
+        int results1 = method.add(n1, n2, n3);
+        System.out.println(results1);
+
+        double results2 = method.add(n4, n2, n3);
+        System.out.println(results2);
+    }
+}
+//============================================
+// Adding 3 methods in Class with Conditions
+class Computer {
+    public void Dance() {
+        System.out.println("Dancing......");
+    }
+    public String getMeASoap(int cost) {
+        if(cost >10) {
+            return "Collect your soap";
+        }else if(cost >6) {
+            return "You will get mini soap";
+        }else {
+            return "Not enough money";
+        }
+    } 
+    public int add(int n1,int n2) {
+        int results = n1 + n2;
+        return results;
+    }
+}
+
+public class Demo {
+    public static void main(String []args) {
+        int n1 =2; 
+        int n2 =4; 
+        
+        Computer comp = new Computer();
+        
+        comp.Dance();
+        
+        String str = comp.getMeASoap(9);
+        System.out.println(str);
+        
+        int i = comp.add(n1, n2);
+        System.out.println(i);
+
+    }
+}
+//===============================================
+
+class SwithCase {
+    public static void main(String []args) {
+        int n = 3;
+        switch(n) {
+            case 1:
+                System.out.println("In Case 1");
+                break;
+            case 2:
+                System.out.println("In Case 2");
+                break;
+            case 3:
+                System.out.println("In Case 3");
+                break;
+            case 4:
+                System.out.println("In Case 4");
+                break;
+            case 5:
+                System.out.println("In Case 5");
+                break;
+            default:
+                System.out.println("In default");
+                break;
+        }
+    }
+}
+//==============================================
+
+public class StringExample {
+    public static void main(String[] args) {
+        String name = "Yugandhar";
+        System.out.println("Length: " + name.length());
+        System.out.println("Uppercase: " + name.toUpperCase());
+        System.out.println("Uppercase: " + name.toLowerCase());
+        System.out.println("Substring: " + name.substring(0, 4));
+        System.out.println("Contains 'and': " + name.contains("and"));
+    }
+}
+
+//===========================================
