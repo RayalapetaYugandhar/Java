@@ -1,0 +1,100 @@
+
+✅ Steps using your repo URL
+
+Open your project folder in VS Code.
+
+Open a Terminal inside VS Code (Ctrl+` or via Terminal → New Terminal).
+
+If you didn’t initialise Git locally already, run:
+
+git init
+
+
+This sets up a local Git repository. 
+GitHub Docs
++1
+
+Add all files and commit:
+
+git add .
+git commit -m "Initial commit"
+
+
+This stages and commits the current content. 
+GitHub Docs
++1
+
+Add your GitHub repo as remote origin:
+
+git remote add origin https://github.com/RayalapetaYugandhar/Java.git
+
+
+This links your local repo with the GitHub repo. 
+GitHub Docs
++1
+
+(Optional but recommended) set default branch to main (if not already):
+
+git branch -M main
+
+
+This ensures your branch name matches GitHub’s default. 
+GitHub Docs
++1
+
+Push your code to GitHub:
+
+git push -u origin main
+
+
+This uploads your local commits to your remote GitHub repo.
+
+/*
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/RayalapetaYugandhar/Java.git
+git branch -M main
+git push -u origin main
+
+*/
+
+
+//////////////////////////////////////////////////
+
+✅ Step 1: Save (stash) your local changes
+git stash
+
+
+This temporarily saves your local changes and makes your working directory clean.
+
+✅ Step 2: Pull the latest code from GitHub
+git pull origin main
+
+
+Now your local repo has the latest code from GitHub.
+
+✅ Step 3: Apply your stashed changes
+git stash pop
+
+
+This reapplies your saved changes on top of the latest code.
+
+If there are merge conflicts, VS Code will highlight them. Fix them manually, then continue.
+
+✅ Step 4: Stage and commit merged changes
+git add .
+git commit -m "Merged local changes with latest GitHub code"
+
+✅ Step 5: Push merged code back to GitHub
+git push origin main
+
+/* Commands to take latest pull and merge local changes
+git stash
+git pull origin main
+git stash pop
+git add .
+git commit -m "Merged local changes with latest GitHub code"
+git push origin main
+
+*/

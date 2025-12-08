@@ -1,0 +1,94 @@
+✅ Notes on ThreeDimentionalArray1 Code
+
+
+Package Declaration
+
+package _13Array;
+Groups related classes under _13Array.
+
+
+
+Class Definition
+
+public class ThreeDimentionalArray1
+Defines the class containing the main method.
+
+
+
+Main Method
+
+public static void main(String[] args)
+Entry point of the program.
+
+
+
+3D Array Declaration
+
+int num[][][] = new int[3][4][2];
+Creates a 3D array:
+
+3 planes (i)
+4 rows per plane (j)
+2 columns per row (k)
+
+
+Total elements = 3 × 4 × 2 = 24.
+
+
+
+Filling the Array
+
+Nested loops:
+
+for (int i = 0; i <= 2; i++)
+    for (int j = 0; j <= 3; j++)
+        for (int k = 0; k <= 1; k++)
+            num[i][j][k] = (int)(Math.random() * 10);
+
+Math.random() → returns double in [0.0, 1.0).
+Multiply by 10 → range [0.0, 10.0).
+Cast to int → values 0–9.
+
+
+
+First Print Block
+
+Prints all elements in structured format:
+
+Outer loop → plane
+Middle loop → row
+Inner loop → columns
+
+
+System.out.print(num[i][j][k] + " "); prints each element.
+System.out.println(); adds new lines for readability.
+
+
+
+Blank Line Between Blocks
+
+System.out.println(); separates the two print sections.
+
+
+
+Second Print Block
+
+Same as first block (duplicate for demonstration).
+Shows the same array again.
+
+
+
+Output Structure
+
+Displays 3 planes.
+Each plane has 4 rows.
+Each row has 2 numbers.
+
+
+
+Key Concepts
+
+3D arrays in Java → int[][][].
+Nested loops for traversal.
+Random number generation with Math.random().
+Printing elements with proper formatting.

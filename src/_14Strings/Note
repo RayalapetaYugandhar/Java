@@ -1,0 +1,57 @@
+public class String_3 {
+	public static void main(String []a)
+	{
+		String s1 = "Yugandhar";
+		String s2 = "Yugandhar";
+		
+		System.out.println(s1==s2);
+	}
+
+}
+
+
+/*
+ * 		Here s1 = "Yugandhar", First it will check Yugandhar in String pool, 
+ * If it is not present then it will store or create the value in Heap memory in some Address.
+ * 
+ * 	 For example Address is 103 then stack memory refere the 103 Address. 
+ * 
+ * 
+ * 		s2 = "Yugandhar", First it will check Yugandhar in String pool, 
+ * If it is present then it will not store or create the value and it directly use the reference Address.
+ * 
+ * 
+ * 
+ * 
+ */
+ 
+ 
+ //		String name = "Royal";      /*Directly we can assign the value to the String*/
+									/*For String we have write everything in Double quotes " " */
+		
+		
+	String Terms:-
+		
+		Mutable String -->>Change
+		Immutable String -->>UnChange
+		
+	Basically Strings are Immutable, Once you create the data then it is Unchangeble 
+	
+	
+	Q). What if you want mutable change ?
+			
+			We have 2 different classes in java to use instead of string we can use
+			
+				1. String Buffer
+				2. String Bulder 
+				
+		** Difference between String Buffer and String Bulder 
+			
+				> String Buffer is thead safe
+				
+				> String bulder is not a thread safe
+				
+				> All methods are same in both 
+				
+				
+-->> Lenght and capacity both are two different things 			

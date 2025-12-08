@@ -1,0 +1,1778 @@
+														Manual & Automation interview question:-
+														
+														
+											Manual and Automation Testing Topics
+
+✅ Manual Testing 
+
+	Definition: Testing performed by a human tester without using automation tools.
+	Process: Testers execute test cases manually, observe results, and report defects.
+	Advantages:
+
+	Good for exploratory, ad-hoc, and usability testing.
+	No need for programming skills.
+	Flexible for small projects or frequent changes.
+
+
+	Disadvantages:
+
+	Time-consuming and labor-intensive.
+	Prone to human error.
+	Not ideal for regression testing or large-scale projects.
+
+
+	Best suited for: Short-term projects, UI/UX testing, and scenarios where automation is not cost-effective.
+
+---------------------------------------------------------
+✅ Automation Testing
+
+	Definition: Testing performed using scripts and tools to automate test execution.
+	Process: Test cases are written in code and executed by automation frameworks (e.g., Selenium, Cypress).
+	Advantages:
+
+	Faster execution, especially for regression and repetitive tests.
+	High accuracy and consistency.
+	Supports continuous integration/continuous delivery (CI/CD).
+
+
+	Disadvantages:
+
+	Requires initial investment in tools and skilled resources.
+	Not suitable for exploratory or UI usability testing.
+
+
+	Best suited for: Large projects, frequent releases, and tests that need to run repeatedly.
+
+
+	Key Difference in One Line:
+	Manual testing relies on human effort, while automation testing uses tools and scripts to speed up and standardize the process.
+
+---------------------------------------------------------	 
+✅ SDLC (Software Development Life Cycle)
+
+	Definition: A structured process for developing software from concept to deployment and maintenance.
+	Phases:
+
+	Requirement Analysis – Gather and analyze business needs.
+	Design – Create system architecture and design documents.
+	Development – Write and build the actual code.
+	Testing – Validate the software against requirements.
+	Deployment – Release the product to users.
+	Maintenance – Fix bugs, update features post-release.
+
+
+	Goal: Deliver high-quality software that meets user requirements.
+
+---------------------------------------------------------
+✅ STLC (Software Testing Life Cycle) 
+
+	Definition: A sequence of activities focused on testing within the SDLC.
+	Phases:
+
+	Requirement Analysis – Understand what needs to be tested.
+	Test Planning – Define strategy, resources, timelines.
+	Test Case Development – Write detailed test cases and scripts.
+	Environment Setup – Prepare hardware/software for testing.
+	Test Execution – Run tests and log defects.
+	Test Closure – Report results, lessons learned.
+
+
+	Goal: Ensure the software is defect-free and meets quality standards.
+
+
+	Key Difference:
+
+	SDLC covers the entire software development process.
+	STLC is a subset of SDLC, focusing only on testing activities.
+---------------------------------------------------------
+✅ Phases of Bug Life Cycle 
+
+	The Bug Life Cycle (also called Defect Life Cycle) describes the stages a bug goes through from identification to closure in a software testing process.
+
+	✅ Phases of Bug Life Cycle
+
+	New
+		Bug is reported for the first time and logged in the tracking system.
+	Assigned
+		Bug is assigned to a developer for analysis and fixing.
+	Open
+		Developer starts working on the bug.
+	Fixed
+		Developer resolves the bug and marks it as fixed.
+	Pending Retest
+		Bug fix is deployed in the test environment, waiting for QA to verify.
+	Retest
+		QA retests the bug to confirm the fix.
+	Verified
+		QA confirms the bug is fixed.
+	Closed
+		Bug is officially closed after successful verification.
+
+
+
+	✅ Other Possible States
+
+	Rejected – Bug is invalid or not reproducible.
+	Deferred – Bug fix postponed to a future release.
+	Duplicate – Bug is already reported.
+	Not a Bug – Reported issue is not considered a defect.
+
+---------------------------------------------------------	
+✅ Severity
+
+	Definition: Indicates how serious the defect is in terms of functionality or system impact.
+	Focus: Technical aspect of the bug.
+	Levels:
+
+	Critical: System crash or major functionality broken.
+	High: Important feature not working.
+	Medium: Minor functionality affected.
+	Low: Cosmetic issues (UI alignment, spelling mistakes).
+
+
+	Decided by: Tester (based on impact on the application).
+
+---------------------------------------------------------
+✅ Priority
+
+	Definition: Indicates how soon the defect should be fixed.
+	Focus: Business or project urgency.
+	Levels:
+
+	High: Must be fixed immediately.
+	Medium: Fix in the next release.
+	Low: Can be fixed later.
+
+
+	Decided by: Project Manager/Product Owner (based on business needs).
+
+
+	Key Difference in One Line:
+
+	Severity = Impact on system.
+	Priority = Urgency to fix.
+
+
+	✅ Example:
+
+	High Severity, Low Priority: A crash in a rarely used feature.
+	Low Severity, High Priority: A spelling mistake in the company name on the homepage.
+
+---------------------------------------------------------
+✅ Test Case
+
+	Definition: A detailed set of steps, inputs, and expected results to validate a specific functionality.
+	Example:
+	Test Case: Verify login with valid credentials.
+	Steps:
+
+	Open login page
+	Enter valid username and password
+	Click login
+	Expected Result: User is redirected to the dashboard.
+
+
+---------------------------------------------------------
+
+✅ Test Scenario
+
+	Definition: A high-level description of what needs to be tested; it represents a user flow or functionality.
+	Example:
+	Scenario: Validate user authentication process.
+	(This scenario can have multiple test cases like valid login, invalid login, password reset, etc.)
+
+----------------------------------------------------------------
+✅ Test Suite
+
+	Definition: A collection of test cases grouped together for execution, usually related to a module or feature.
+	Example:
+	Test Suite: Login Module
+	Includes test cases for:
+
+	Valid login
+	Invalid login
+	Forgot password
+	Session timeout
+
+
+
+
+	Key Difference in One Line:
+
+	Test Case = Detailed steps for one condition.
+	Test Scenario = Broad functionality to test.
+	Test Suite = Group of related test cases.
+---------------------------------------------------------------
+✅ Regression Testing
+
+	Definition: Testing done to ensure that new changes (code fixes, enhancements) have not broken existing functionality.
+	Purpose: Verify that the application still works as expected after modifications.
+	Scope: Covers existing features and previously tested areas.
+	When: After bug fixes, new features, or code changes.
+	Example:
+	After adding a new payment method, test old payment methods to ensure they still work.
+
+-------------------------------------------------------------
+✅ Retesting
+
+	Definition: Testing done to verify that a specific defect has been fixed.
+	Purpose: Confirm that the reported bug no longer exists.
+	Scope: Focused on the failed test cases only.
+	When: After a developer marks a bug as fixed.
+	Example:
+	If login failed earlier due to incorrect password validation, retest that scenario after the fix.
+
+
+	Key Difference in One Line:
+
+	Regression Testing = Check overall stability after changes.
+	Retesting = Check if a specific bug is fixed.	
+------------------------------------------------------------------
+✅ Waterfall Model
+
+	Definition: A linear and sequential approach to software development.
+	Process: Each phase (Requirements → Design → Development → Testing → Deployment → Maintenance) must be completed before moving to the next.
+	Characteristics:
+
+	Rigid structure.
+	Changes are difficult once a phase is completed.
+	Documentation-heavy.
+
+
+	Best for: Projects with fixed requirements and minimal changes.
+	Advantages:
+
+	Easy to manage due to clear structure.
+	Good for small projects.
+
+
+	Disadvantages:
+
+	Not flexible for changing requirements.
+	Late testing phase → defects found late.
+
+
+--------------------------------------------------------------------
+
+✅ Agile Model
+
+	Definition: An iterative and incremental approach focused on flexibility and customer collaboration.
+	Process: Work is divided into sprints (short cycles), delivering small increments of the product.
+	Characteristics:
+
+	Continuous feedback and adaptation.
+	Testing happens in every iteration.
+	Less documentation, more collaboration.
+
+
+	Best for: Projects with changing requirements or evolving scope.
+	Advantages:
+
+	Faster delivery of features.
+	High customer involvement.
+
+
+	Disadvantages:
+
+	Requires skilled team and strong communication.
+	Harder to predict timelines and costs.
+
+
+
+
+	Key Difference in One Line:
+
+	Waterfall = Sequential, rigid, best for stable requirements.
+	Agile = Iterative, flexible, best for dynamic requirements.	
+----------------------------------------------------------------------------------
+✅ Smoke Testing
+
+	Definition: A basic check to ensure the major functionalities of the application work after a new build or deployment.
+	Purpose: Verify that the build is stable enough for further testing.
+	Scope: Broad and shallow – covers critical features only.
+	When: Performed early, right after a build is released.
+	Example:
+	Check if the application launches, login works, and main navigation is functional.
+
+----------------------------------------------------------------------------
+✅ Sanity Testing
+
+	Definition: A focused check to ensure that specific functionality or bug fixes work as expected.
+	Purpose: Validate that recent changes didn’t break related areas.
+	Scope: Narrow and deep – focuses on particular modules or features.
+	When: After receiving a build with minor changes or bug fixes.
+	Example:
+	If a bug in the payment module was fixed, test that module thoroughly.
+
+
+	Key Difference in One Line:
+
+	Smoke Testing = Build verification (broad check).
+	Sanity Testing = Change verification (focused check).
+
+----------------------------------------------------------------------------
+
+✅ Boundary Testing
+
+	Definition: Testing the limits or boundaries of input values to ensure the system handles edge cases correctly.
+	Purpose: Detect errors at the extreme ends of input ranges.
+	Example:
+
+	If an input field accepts values from 1 to 100, test:
+
+	Lower boundary: 0, 1
+	Upper boundary: 100, 101
+
+
+
+
+	Why important? Most defects occur at boundary conditions rather than in the middle of ranges.
+
+----------------------------------------------------------------------------
+✅ Localization Testing
+
+	Definition: Testing to ensure the application works correctly in a specific locale (language, culture, region).
+	Purpose: Validate translations, date/time formats, currency, units, and cultural appropriateness.
+	Example:
+
+	For French locale, check:
+
+	UI text is properly translated.
+	Date format is DD/MM/YYYY.
+	Currency symbol is €.
+
+
+
+
+	Why important? Prevents issues in global releases and ensures user experience for different regions.
+
+
+	Key Difference in One Line:
+
+	Boundary Testing = Focus on numeric/data limits.
+	Localization Testing = Focus on language and regional settings.
+----------------------------------------------------------------------------
+✅ White Box Testing
+
+	Definition: Testing the internal structure, logic, and code of the application.
+	Focus: How the system works internally.
+	Who performs: Developers (mostly) or testers with programming knowledge.
+	Techniques:
+
+	Statement coverage
+	Branch coverage
+	Path coverage
+
+
+	Advantages:
+
+	Helps optimize code and find hidden errors.
+	Ensures all paths and conditions are tested.
+
+
+	Disadvantages:
+
+	Requires programming knowledge.
+	Time-consuming for large systems.
+
+
+	Example:
+	Testing whether all loops and conditions in the login function execute correctly.
+
+----------------------------------------------------------------------------
+✅ Black Box Testing
+
+	Definition: Testing the functionality of the application without knowing internal code.
+	Focus: What the system does (input/output).
+	Who performs: QA testers.
+	Techniques:
+
+	Equivalence partitioning
+	Boundary value analysis
+
+
+	Advantages:
+
+	No need for coding knowledge.
+	Focuses on user experience and requirements.
+
+
+	Disadvantages:
+
+	Cannot test internal logic.
+	Limited coverage of code paths.
+
+
+	Example:
+	Enter username and password → Verify login works (without knowing how code handles it).
+
+
+	Key Difference in One Line:
+
+	White Box = Code-based testing (internal logic).
+	Black Box = Functionality-based testing (external behavior).
+----------------------------------------------------------------------------
+✅ Verification
+
+	Definition: The process of checking whether the product is being built correctly according to requirements and design specifications.
+	Focus: Quality of process (Are we following the right steps?)
+	When: During development phases (reviews, inspections).
+	Activities:
+
+	Requirement reviews
+	Design reviews
+	Code inspections
+
+
+	Example:
+	Checking if the design document matches the requirement specification.
+
+----------------------------------------------------------------------------
+✅ Validation
+
+	Definition: The process of checking whether the right product has been built and meets user needs.
+	Focus: Quality of product (Does it fulfill the intended purpose?)
+	When: After development, during testing.
+	Activities:
+
+	Functional testing
+	System testing
+	User acceptance testing
+
+
+	Example:
+	Testing the application to ensure it performs as expected for end-users.
+
+
+	Key Difference in One Line:
+
+	Verification = Are we building the product right?
+	Validation = Are we building the right product?
+----------------------------------------------------------------------------
+✅ 1. Reporting the Bug
+
+	Use a Bug Tracking Tool: JIRA, Azure DevOps, Bugzilla, etc.
+	Include Key Details:
+
+	Title: Short, clear description of the issue.
+	Description: Detailed explanation of the bug.
+	Steps to Reproduce: Exact steps to replicate the issue.
+	Expected Result vs Actual Result: What should happen vs what happened.
+	Severity & Priority: Impact on system and urgency to fix.
+	Environment Details: OS, browser, app version, build number.
+	Attachments: Screenshots, logs, videos if possible.
+
+
+
+	Example Bug Report:
+	Title: Login fails with valid credentials
+	Description: User cannot log in using correct username and password.
+	Steps:
+	1. Open login page
+	2. Enter valid credentials
+	3. Click Login
+	Expected: User should be redirected to dashboard
+	Actual: Error message displayed
+	Severity: High | Priority: High
+	Environment: Chrome v118, Build #2025.11.27
+
+----------------------------------------------------------------------------
+✅ 2. Tracking the Bug
+
+	Assign the Bug: To the responsible developer/team.
+	Monitor Status: Common statuses include:
+
+	New → Assigned → In Progress → Fixed → Retest → Closed
+
+
+	Communicate Updates: Keep stakeholders informed.
+	Retest After Fix: Verify the bug is resolved.
+	Close the Bug: Once verified and no side effects found.
+
+
+	Best Practices
+
+	Always log bugs immediately after discovery.
+	Provide clear and reproducible steps.
+	Use severity and priority correctly.
+	Link related test cases or requirements for traceability.
+----------------------------------------------------------------------------
+✅ Error
+
+	Definition: A mistake made by a developer during coding or design.
+	Origin: Human mistake in logic, syntax, or design.
+	Example:
+	Developer writes x = y + z instead of x = y - z.
+
+----------------------------------------------------------------------------
+✅ Bug
+
+	Definition: A flaw in the software that causes it to behave incorrectly or produce unexpected results.
+	Origin: Errors in code lead to bugs in the application.
+	Example:
+	Clicking “Submit” does nothing because the button’s event handler is missing.
+
+----------------------------------------------------------------------------
+✅ Defect
+
+	Definition: A deviation from the expected requirement found during testing.
+	Origin: When a tester finds a bug and reports it, it becomes a defect in the tracking system.
+	Example:
+	Requirement says “Password must be minimum 8 characters,” but the system accepts 6 characters.
+
+
+	Key Difference in One Line:
+
+	Error = Developer’s mistake in code/design.
+	Bug = Fault in the software due to error.
+	Defect = Reported bug that violates requirements.	
+
+----------------------------------------------------------------------------------------
+
+											Selenium Webdriver & Automation Concepts
+---------------------------------------------------------------------------------------								
+What is selenium ?											
+
+Selenium is an open-source automation testing framework primarily used for testing web applications across different browsers and platforms.
+
+✅ Key Features of Selenium
+
+	Cross-Browser Support: Works with Chrome, Firefox, Edge, Safari, etc.
+	Multi-Language Support: You can write test scripts in Java, Python, C#, Ruby, JavaScript, etc.
+	Platform Independent: Runs on Windows, macOS, Linux.
+	Integration: Works with tools like TestNG, JUnit, Maven, and CI/CD tools like Jenkins.
+	Components:
+
+	Selenium WebDriver: Automates browser actions.
+	Selenium IDE: Record and playback tool for quick test creation.
+	Selenium Grid: Enables parallel execution on multiple machines/browsers.
+
+
+
+
+✅ Why Use Selenium?
+
+	Automates functional and regression testing for web apps.
+	Reduces manual effort for repetitive tasks.
+	Supports headless browser testing for faster execution.
+
+
+	Example Use Case:
+	Automating login functionality:
+
+	Open browser → Navigate to login page → Enter credentials → Click login → Verify dashboard.											
+
+
+						Simple Java Selenium code:-
+
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.chrome.ChromeDriver;
+
+	public class SeleniumExample {
+		public static void main(String[] args) {
+			// Set path to ChromeDriver (update path as per your system)
+			System.setProperty("webdriver.chrome.driver", "C:\\path\\to\\chromedriver.exe");
+
+			// Initialize WebDriver
+			WebDriver driver = new ChromeDriver();
+
+			// Open Google
+			driver.get("https://www.google.com");
+
+			// Find search box and enter text
+			WebElement searchBox = driver.findElement(By.name("q"));
+			searchBox.sendKeys("Selenium");
+			searchBox.submit();
+
+			// Print page title
+			System.out.println("Page Title: " + driver.getTitle());
+
+			// Close browser
+			driver.quit();
+		}
+	}
+
+
+--------------------------------------------------------------------------------	
+Selenium suite/components :-
+
+The Selenium Suite consists of multiple components that work together to enable web automation testing. Here’s a breakdown:
+
+✅ 1. Selenium IDE
+
+	What it is: A browser extension (Chrome/Firefox) for record-and-playback testing.
+	Use Case: Quick test creation without coding.
+	Best for: Beginners or simple test scenarios.
+
+
+✅ 2. Selenium WebDriver
+
+	What it is: A programming interface to interact with browsers using code.
+	Use Case: Automates browser actions like clicking, typing, navigation.
+	Supports: Multiple languages (Java, Python, C#, etc.) and browsers.
+	Best for: Complex, real-world test automation.
+
+
+✅ 3. Selenium Grid
+
+	What it is: A tool for parallel test execution across multiple machines and browsers.
+	Use Case: Speeds up testing by running tests on different environments simultaneously.
+	Best for: Large-scale projects and cross-browser testing.
+
+
+✅ 4. Selenium RC (Remote Control) (Deprecated)
+
+	What it was: An older component for running tests in different browsers.
+	Status: Replaced by WebDriver for better performance and simplicity.
+
+
+	Architecture Overview
+
+	IDE → For quick recording.
+	WebDriver → For coding-based automation.
+	Grid → For distributed execution.
+
+---------------------------------------------------------------------------------------
+✅ Regression Testing
+
+	Definition: Testing performed to ensure that new changes (bug fixes, enhancements) have not broken existing functionality.
+	Purpose: Maintain stability of the application after updates.
+	Scope: Entire application or impacted modules.
+	When: After code changes, new features, or bug fixes.
+	Example:
+	After adding a new payment method, test old payment flows to ensure they still work.
+
+---------------------------------------------------------------------------------------
+✅ Cross-Browser Testing
+
+	Definition: Testing to ensure the application works consistently across different browsers and versions.
+	Purpose: Validate UI rendering, functionality, and compatibility.
+	Scope: Multiple browsers (Chrome, Firefox, Edge, Safari) and sometimes devices.
+	When: Before release or during regression cycles.
+	Example:
+	Check if the login page looks and works the same in Chrome, Firefox, and Safari.
+
+
+	Key Difference in One Line:
+
+	Regression Testing = Stability after changes.
+	Cross-Browser Testing = Compatibility across browsers.
+
+---------------------------------------------------------------------------------------	
+TestNG is a testing framework for Java that is widely used with Selenium for automating web application testing. It is inspired by JUnit but offers more powerful features for organizing and running tests.
+
+✅ What is TestNG?
+
+	Full Form: Test Next Generation.
+	Purpose: Provides an organized way to write, manage, and execute test cases in Java.
+	Features:
+
+	Annotations: (@Test, @BeforeSuite, @AfterSuite, etc.) for structured test flow.
+	Grouping & Prioritization: Run specific sets of tests easily.
+	Data-Driven Testing: Supports parameterization and DataProviders.
+	Parallel Execution: Run tests concurrently for faster execution.
+	Reporting: Generates detailed HTML reports automatically.
+
+---------------------------------------------------------------------------------------	
+
+✅ Why Use TestNG with Selenium?
+
+	Selenium alone does not provide a test management framework; it only automates browser actions.
+	TestNG helps:
+
+	Organize Selenium scripts into test suites.
+	Control execution order and dependencies.
+	Perform parallel testing (e.g., multiple browsers).
+	Generate reports for test results.
+	Integrate easily with CI/CD tools like Jenkins.
+
+---------------------------------------------------------------------------------------	
+✅ Example: Selenium + TestNG
+
+
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.chrome.ChromeDriver;
+	import org.testng.annotations.Test;
+
+	public class GoogleTest {
+		@Test
+		public void openGoogle() {
+			System.setProperty("webdriver.chrome.driver", "C:\\path\\to\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			driver.get("https://www.google.com");
+			System.out.println("Title: " + driver.getTitle());
+			driver.quit();
+		}
+	}
+
+---------------------------------------------------------------------------------------	
+TestNG Annotations are special markers that control the execution flow of test methods in a TestNG framework. They help organize tests, set up preconditions, and manage postconditions.
+
+✅ Common TestNG Annotations
+	Annotation  						Purpose
+
+	@Test 						Marks a method as a test case.
+	@BeforeSuite				Runs before all tests in the suite.
+	@AfterSuite					Runs after all tests in the suite.
+	@BeforeTest					Runs before any test method in <test> tag of XML.
+	@AfterTest					Runs after all test methods in <test> tag.
+	@BeforeClass				Runs before the first method in the current class.
+	@AfterClass					Runs after all methods in the current class.
+	@BeforeMethod				Runs before each test method.
+	@AfterMethod				Runs after each test method.
+	@DataProvider				Supplies data for data-driven testing.
+	@Parameters					Passes parameters from XML to test methods.
+
+✅ Example Usage
+		
+	import org.testng.annotations.*;
+
+	public class TestNGExample {
+
+		@BeforeSuite
+		public void beforeSuite() {
+			System.out.println("Before Suite");
+		}
+
+		@BeforeClass
+		public void beforeClass() {
+			System.out.println("Before Class");
+		}
+
+		@BeforeMethod
+		public void beforeMethod() {
+			System.out.println("Before Method");
+		}
+
+		void testCase1() {
+			System.out.println("Executing Test Case 1");
+		}
+
+		@AfterMethod
+		public void afterMethod() {
+			System.out.println("After Method");
+		}
+
+		@AfterClass
+		public void afterClass() {
+			System.out.println("After Class");
+		}
+
+		@AfterSuite
+		public void afterSuite() {
+			System.out.println("After Suite");
+		}
+	}
+--------------------------------------------------------------
+TestNG.xml file usage ?
+
+The TestNG XML file is used to configure and organize test execution in TestNG. It allows you to define:
+
+	Which classes and methods to run.
+	Grouping of tests.
+	Parameterization.
+	Parallel execution.
+	Suite-level settings.
+
+
+✅ Why Use TestNG XML?
+
+	Centralized control over test execution.
+	Run multiple classes or packages together.
+	Apply configurations without changing code.
+	Integrate easily with CI/CD tools like Jenkins.
+
+
+✅ Basic Structure of TestNG XML
+
+	<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+	<suite name="MySuite" parallel="false">
+		<test name="MyTest">
+			<classes>
+				<class name="com.example.tests.GoogleTest"/>
+				<class name="com.example.tests.LoginTest"/>
+			</classes>
+		</test>
+	</suite>
+
+
+✅ Key Tags
+
+	<suite> → Defines the entire suite.
+	<test> → Groups classes under one test.
+	<classes> → Contains multiple <class> tags.
+	<class> → Specifies the fully qualified class name.
+	<methods> → Can include/exclude specific methods.
+	<parameter> → Pass values to test methods.
+
+
+✅ Example with Parameters
+
+	<suite name="ParameterizedSuite">
+		<test name="LoginTest">
+			<parameter name="username" value="admin"/>
+			<parameter name="password" value="admin123"/>
+			<classes>
+				<class name="com.example.tests.LoginTest"/>
+			</classes>
+		</test>
+	</suite>
+
+----------------------------------------------------------------------------
+how to run tests in parallel using TestNG XML?
+
+To run tests in parallel using TestNG XML, you can use the parallel attribute in the <suite> or <test> tag. TestNG supports parallel execution at different levels: methods, tests, or classes.
+
+✅ Example: Parallel Execution by Methods
+
+
+	<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+	<suite name="ParallelSuite" parallel="methods" thread-count="3">
+		<test name="ParallelTest">
+			<classes>
+				< </test>            <class name="com.example.tests.GoogleTest"/>
+	</suite>
+				<class name="com.example.tests.LoginTest"/>
+			</classes>
+
+
+	parallel="methods" → Runs test methods in parallel.
+	thread-count="3" → Maximum 3 threads at a time.
+
+✅ Example: Parallel Execution by Classes
+
+
+	<suite name="ParallelSuite" parallel="classes" thread-count="2">
+		<test name="ParallelClasses">
+			<classes>
+				<class name="com.example.tests.GoogleTest"/>
+				<class name="com.example.tests.LoginTest"/>
+			</classes>
+		</test>
+	</suite>
+
+
+	parallel="classes" → Runs entire classes in parallel.
+
+
+
+✅ Example: Parallel Execution by Tests
+
+
+	<suite name="ParallelSuite" parallel="tests" thread-count="2">
+		<test name="Test1">
+			<classes>
+				<class name="com.example.tests.GoogleTest"/>
+			</classes>
+		</test>
+		<test name="Test2">
+			<classes>
+				<class name="com.example.tests.LoginTest"/>
+			</classes>
+		</test>
+	</suite>
+
+
+	parallel="tests" → Runs <test> blocks in parallel.
+
+
+✅ Key Points
+
+	Use thread-count to control concurrency.
+	Ensure your tests are independent (no shared state).
+	Works well with Selenium Grid for cross-browser parallel execution.
+
+-----------------------------------------------------------------	
+Selenium Locators ?
+
+In Selenium, locators are used to identify elements on a web page so that automation scripts can interact with them (click, type, select, etc.). Here are the main types:
+
+✅ Common Selenium Locators
+		ID, Name, Class Name, Tag Name, Link Text, Partial Link Text, CSS Selector, XPath
+
+
+
+ID
+
+Finds element by its id attribute.
+Example:
+		driver.findElement(By.id("username")).sendKeys("admin");
+
+Name
+
+Finds element by its name attribute.
+Example:
+		driver.findElement(By.name("password")).sendKeys("admin123");
+
+Class Name
+
+Finds element by its class attribute.
+Example:
+		driver.findElement(By.className("login-btn")).click();
+		
+Tag Name
+
+Finds element by its HTML tag (e.g., input, button).
+Example:
+		driver.findElement(By.tagName("input")).click();
+
+Link Text
+
+Finds link by its exact text.
+Example:
+		driver.findElement(By.linkText("Forgot Password")).click();
+
+Partial Link Text
+
+Finds link by partial text match.
+Example:
+		driver.findElement(By.partialLinkText("Forgot")).click();
+
+CSS Selector
+
+Finds element using CSS patterns.
+Example:
+		driver.findElement(By.cssSelector("input[type='text']")).sendKeys("admin");
+
+XPath
+
+Finds element using XML path expression.
+Example
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("admin");
+							
+✅ Which Locator to Use?
+
+	ID → Fastest and most reliable (if unique).
+	Name → Good alternative if ID is missing.
+	CSS Selector → Preferred for complex conditions.
+	XPath → Powerful but slower; use when others fail.							
+
+----------------------------------------------------------------------	
+
+Here’s the difference between close() and quit() in Selenium:
+
+✅ close()
+
+	Purpose: Closes the current browser window that the WebDriver is controlling.
+	Behavior: If multiple tabs/windows are open, only the active one is closed.
+	Example:
+		driver.close();
+
+	Use Case: When you want to close a single window but keep the WebDriver session alive.
+
+✅ quit()
+
+	Purpose: Closes all browser windows opened by the WebDriver and ends the session.
+	Behavior: Terminates the WebDriver instance completely.
+	Example:
+			driver.quit();
+	Use Case: At the end of the test execution when you want to clean up everything.
+
+
+	Key Difference in One Line:
+
+	close() = Closes one window.
+	quit() = Closes all windows and ends the session.
+
+-----------------------------------------------------------------------------------
+
+In Selenium, waits are used to handle synchronization issues between the script and the web page. There are two main types:
+
+✅ 1. Implicit Wait
+
+	Definition: Tells WebDriver to wait for a certain amount of time while locating elements before throwing NoSuchElementException.
+	Scope: Applies globally to all elements.
+	Syntax:
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+	Use Case: When elements take time to appear but are generally present.
+
+
+✅ 2. Explicit Wait (WebDriverWait)
+
+	Definition: Waits for a specific condition to occur before proceeding.
+	Scope: Applies to a particular element or condition.
+	Syntax:
+
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
+
+	Use Case: When you need to wait for conditions like:
+
+	Element to be clickable
+	Element to be visible
+	Text to be present
+
+
+✅ Key Differences			
+	Feature				Implicit Wait			Explicit Wait
+	
+	Applies to			All elementsS			pecific element/condition
+	Flexibility				Low							High
+	Best for			Simple delays			Dynamic conditions
+-------------------------------------------------------------------------------------------
+Expected conditions in explicit wait:
+
+In Selenium, when using Explicit Wait with WebDriverWait, you often combine it with ExpectedConditions to wait for specific states of elements or the page. Here are the most commonly used conditions:
+
+✅ Common ExpectedConditions
+
+
+	visibilityOfElementLocated(By locator)
+	Waits until the element is visible on the page.
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
+
+	elementToBeClickable(By locator)
+	Waits until the element is visible and enabled (clickable).
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("loginBtn")));
+
+	presenceOfElementLocated(By locator)
+	Waits until the element is present in the DOM (not necessarily visible).
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.name("email")));
+
+	textToBePresentInElement(By locator, String text)
+	Waits until the given text appears in the element.
+			wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("status"), "Success"));
+	alertIsPresent()
+	Waits until an alert is present.
+			wait.until(ExpectedConditions.alertIsPresent());
+
+	titleContains(String title)
+	Waits until the page title contains a specific string.
+			wait.until(ExpectedConditions.titleContains("Dashboard"));
+
+	urlContains(String fraction)
+	Waits until the current URL contains a specific substring.
+			wait.until(ExpectedConditions.urlContains("home"));
+
+	Example Full Usage
+			
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("loginBtn")));
+			loginButton.click();
+
+-----------------------------------------------------------------------------
+Assertions in selenium:-
+
+In Selenium, Assertions are used to validate expected results against actual results during test execution. They help determine whether a test passes or fails.
+
+✅ Types of Assertions in Selenium (via TestNG)
+
+
+Hard Assertions
+
+	If an assertion fails, the test stops immediately.
+	Examples:
+		
+		import org.testng.Assert;
+
+		Assert.assertEquals(actualTitle, "Expected Title");
+		Assert.assertTrue(element.isDisplayed());
+		Assert.assertFalse(isErrorVisible);
+
+Soft Assertions
+
+	Test continues even if an assertion fails; results are collected and reported at the end.
+	Requires SoftAssert class.
+	Example:
+		
+		import org.testng.asserts.SoftAssert;
+
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(actualTitle, "Expected Title");
+		softAssert.assertTrue(element.isDisplayed());
+		softAssert.assertAll(); // Mandatory to report failures
+		
+✅ Common Assertion Methods
+
+	assertEquals(actual, expected)
+	assertNotEquals(actual, expected)
+	assertTrue(condition)
+	assertFalse(condition)
+	assertNull(object)
+	assertNotNull(object)
+
+
+✅ Why Assertions Are Important?
+
+	Ensure the application behaves as expected.
+	Automatically mark tests as pass/fail.
+	Improve reliability of automated test scripts.
+
+------------------------------------------------------------	
+findElement() vs findElements()
+
+✅ findElement()
+
+	Finds the first matching element.
+	Returns a WebElement.
+	Throws NoSuchElementException if not found.
+	Example:
+	WebElement usernameField = driver.findElement(By.id("username"));
+
+
+✅ findElements()
+
+	Finds all matching elements.
+	Returns a List.
+	Returns an empty list if none found (no exception).
+	Example:
+	List<WebElement> links = driver.findElements(By.tagName("a"));
+
+
+Key Difference:
+	findElement() → Single element, exception if not found.
+	findElements() → Multiple elements, empty list if not found.
+------------------------------------------------------------------------
+getTitle(), getText(). getAttribute()
+✅ getTitle()
+
+	Purpose: Retrieves the title of the current web page.
+	Example:
+	String pageTitle = driver.getTitle();
+	Result: "Google" if you are on Google’s homepage.
+
+
+✅ getText()
+
+	Purpose: Gets the visible text of an element.
+	Example:
+	String buttonText = driver.findElement(By.id("loginBtn")).getText();
+	Result: "Login" if the button shows that text.
+
+
+✅ getAttribute()
+
+	Purpose: Fetches the value of a specific attribute of an element.
+	Example:
+	String placeholder = driver.findElement(By.id("username")).getAttribute("placeholder");
+	Result: "Enter Username" if that is the placeholder text.
+
+
+Key Difference:
+
+	getTitle() → Page title.
+	getText() → Visible text of an element.
+	getAttribute() → Value of an element’s attribute (like href, value, placeholder).
+
+---------------------------------------------------------
+Handling Alerts and Dropdowns	
+
+Here’s how you handle Alerts and Dropdowns in Selenium:
+
+✅ Handling Alerts
+	Alerts are pop-up dialogs in the browser (JavaScript alerts). Selenium provides the Alert interface for handling them.
+	Steps:
+
+	Switch to the alert using driver.switchTo().alert().
+	Perform actions like accept, dismiss, getText, or sendKeys.
+
+	Examples:
+
+	Accept alert:
+	driver.switchTo().alert().accept();
+	Dismiss alert:
+	driver.switchTo().alert().dismiss();
+	Get alert text:
+	String alertText = driver.switchTo().alert().getText();
+	Send input to alert (if prompt):
+	driver.switchTo().alert().sendKeys("Hello");
+
+
+✅ Handling Dropdowns
+	Dropdowns in HTML use <select> tags. Selenium provides the Select class for handling them.
+	Steps:
+
+	Locate the dropdown element.
+	Create a Select object.
+	Use methods like selectByVisibleText, selectByValue, or selectByIndex.
+
+	Examples:
+
+	Select by visible text:
+	Select dropdown = new Select(driver.findElement(By.id("country")));
+	dropdown.selectByVisibleText("India");
+	Select by value:
+	dropdown.selectByValue("IN");
+	Select by index:
+	dropdown.selectByIndex(2);
+
+---------------------------------------------------------------------
+Screenshots in Selenium:-
+
+In Selenium, you can capture screenshots of the browser during test execution using the TakesScreenshot interface. This is useful for debugging and reporting.
+
+✅ Steps to Take a Screenshot
+
+	Cast the WebDriver instance to TakesScreenshot.
+	Call getScreenshotAs() method.
+	Save the file to a desired location.
+
+
+✅ Example
+
+	Import required classes: org.openqa.selenium.TakesScreenshot, org.openqa.selenium.OutputType, java.io.File, and org.apache.commons.io.FileUtils.
+	Code snippet:
+	TakesScreenshot ts = (TakesScreenshot) driver;
+	File src = ts.getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(src, new File("C:\\screenshots\\homepage.png"));
+
+
+✅ Key Points
+
+	OutputType.FILE → Saves screenshot as a file.
+	OutputType.BASE64 → Returns screenshot as Base64 string (useful for reports).
+	Works for full page or current viewport only (not entire scrollable page unless using extra libraries).		
+
+---------------------------------------------------------------
+Mouse & keyboard actions(Actions class)
+In Selenium, mouse and keyboard actions are handled using the Actions class, which provides advanced user interactions beyond simple clicks and typing.
+
+✅ Mouse Actions
+
+	Click:
+	new Actions(driver).click(element).perform();
+	Double Click:
+	new Actions(driver).doubleClick(element).perform();
+	Right Click (Context Click):
+	new Actions(driver).contextClick(element).perform();
+	Mouse Hover:
+	new Actions(driver).moveToElement(element).perform();
+	Drag and Drop:
+	new Actions(driver).dragAndDrop(sourceElement, targetElement).perform();
+
+
+✅ Keyboard Actions
+
+	Send Keys:
+	new Actions(driver).sendKeys(Keys.ENTER).perform();
+	Combination Keys (e.g., Ctrl + A):
+	new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+
+
+✅ Why Use Actions Class?
+
+	Handles complex interactions like hover menus, drag-and-drop, and keyboard shortcuts.
+	Useful for dynamic elements that require advanced gestures.	
+
+------------------------------------------------------------------------------------
+Handling Multiple Browser Windows:-
+
+To handle multiple browser windows in Selenium, you use window handles. Each browser window or tab has a unique handle that Selenium can switch to.
+
+✅ Steps to Handle Multiple Windows
+
+
+	Get the current window handle
+	String mainWindow = driver.getWindowHandle();
+
+
+	Perform an action that opens a new window/tab
+	(e.g., clicking a link that opens in a new tab)
+
+
+	Get all window handles
+	Set<String> allWindows = driver.getWindowHandles();
+
+
+	Switch to the new window
+	Loop through the handles and switch to the one that is not the main window:
+	for (String handle : allWindows) { if (!handle.equals(mainWindow)) { driver.switchTo().window(handle); } }
+
+
+	Perform actions in the new window
+	Example: System.out.println(driver.getTitle());
+
+
+	Close the new window and switch back
+	driver.close(); driver.switchTo().window(mainWindow);
+
+
+
+✅ Key Points
+
+	getWindowHandle() → Returns the handle of the current window.
+	getWindowHandles() → Returns a set of all open windows.
+	Always switch back to the main window after finishing.	
+
+-----------------------------------------------------------------------------
+what is POM:-
+
+POM (Page Object Model) is a design pattern used in Selenium automation to make test scripts more maintainable, reusable, and readable.
+
+✅ What is POM?
+
+	It creates a separate class for each web page in the application.
+	Each class contains:
+
+	Web elements (locators)
+	Methods to interact with those elements
+
+
+	Test scripts call these methods instead of directly using locators.
+
+
+✅ Why Use POM?
+
+	Improves maintainability: If a locator changes, update only in one place.
+	Enhances readability: Test scripts look clean and business-focused.
+	Promotes reusability: Common actions can be reused across tests.
+
+
+✅ Structure
+
+	Page Class: Represents a web page.
+	Test Class: Uses page class methods to perform actions.
+
+
+✅ Example
+	LoginPage.java
+
+
+	public class LoginPage {
+		WebDriver driver;
+
+		By username = By.id("username");
+		By password = By.id("password");
+		By loginBtn = By.id("loginBtn");
+
+		public LoginPage(WebDriver driver) {
+			this.driver = driver;
+		}
+
+		public void enterUsername(String user) {
+			driver.findElement(username).sendKeys(user);
+		}
+
+		public void enterPassword(String pass) {
+			driver.findElement(password).sendKeys(pass);
+		}
+
+		public void clickLogin() {
+			driver.findElement(loginBtn).click();
+		}
+	}
+
+
+	LoginTest.java
+
+	LoginPage login = new LoginPage(driver);
+	login.enterUsername("admin");
+	login.enterPassword("admin123");
+	login.clickLogin();
+		
+---------------------------------------------------------------------------------------
+What is Cucumber(BDD):
+
+Cucumber is an open-source testing tool that supports Behavior-Driven Development (BDD). It allows writing test cases in a natural language format (Gherkin) that is easy for both technical and non-technical stakeholders to understand.
+
+✅ What is BDD?
+
+	Behavior-Driven Development focuses on collaboration between developers, testers, and business stakeholders.
+	Tests are written in a Given-When-Then format to describe system behavior.
+
+
+✅ Why Use Cucumber?
+
+	Bridges the gap between business requirements and automation testing.
+	Makes test cases readable and understandable for everyone.
+	Integrates with Selenium, Java, JUnit, and TestNG for automation.
+
+
+✅ Cucumber Structure
+
+1.Feature File (written in Gherkin)
+
+	Example:
+		Feature: Login functionality
+			Scenario: Successful login
+				Given user is on login page
+				When user enters valid credentials
+				Then user should see the dashboard
+
+2.Step Definitions (Java methods that implement steps)
+
+	Example:
+	@Given("user is on login page")
+
+
+3.Runner Class (Executes the feature files)
+
+
+✅ Benefits
+
+	Improves communication between teams.
+	Encourages test-first approach.
+	Supports data-driven testing.
+
+--------------------------------------------------------------------
+what is maven :-
+
+Maven is a build automation and dependency management tool primarily used for Java projects. It simplifies the process of compiling code, managing libraries, packaging, and deploying applications.
+
+✅ Key Features of Maven
+
+	Dependency Management: Automatically downloads required libraries (JAR files) from a central repository.
+	Build Lifecycle: Handles compilation, testing, packaging, and deployment.
+	Project Structure: Standardizes project layout for consistency.
+	Plugins: Extensible through plugins for tasks like running tests, generating reports, etc.
+
+
+✅ Why Use Maven in Selenium Projects?
+
+	Easily manage Selenium and TestNG dependencies via pom.xml.
+	No need to manually download JAR files.
+	Integrates with CI/CD tools like Jenkins.
+	Supports profiles for different environments.
+
+
+✅ Core File: pom.xml
+	This XML file defines:
+
+		Project details
+		Dependencies (e.g., Selenium, TestNG)
+		Build configurations
+
+		Example snippet for Selenium + TestNG:
+					
+			<dependencies>
+				<dependency>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-java</artifactId>
+					<version>4.14.0</version>
+				</dependency>
+				<dependency>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+					<version>7.8.0</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+------------------------------------------------------------
+Show a complete pom.xml for a Selenium + TestNG project?
+
+Here’s a complete pom.xml for a Selenium + TestNG project using Maven:
+
+			
+		<project xmlns="http://maven.apache.org/POM/4.0.0"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+									 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+			<modelVersion>4.0.0</modelVersion>
+
+			<groupId>com.example</groupId>
+			<artifactId>selenium-testng-project</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<packaging>jar</packaging>
+
+			<name>Selenium TestNG Project</name>
+
+			<properties>
+				<maven.compiler.source>11</maven.compiler.source>
+				<maven.compiler.target>11</maven.compiler.target>
+			</properties>
+
+			<dependencies>
+				<!-- Selenium Java -->
+				<dependency>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-java</artifactId>
+					<version>4.14.0</version>
+				</dependency>
+
+				<!-- TestNG -->
+				<dependency>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+					<version>7.8.0</version>
+					<scope>test</scope>
+				</ Plugin -->        </dependency>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.11.0</version>
+						<configuration>
+							<source>11</source>
+							<target>11</target>
+						</configuration>
+					</plugin>
+
+					<!-- Maven Surefire Plugin (to run TestNG tests) -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M9</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</project>
+
+				<!-- WebDriver Manager (Optional for auto driver setup) -->
+				<dependency>
+					<groupId>io.github.bonigarcia</groupId>
+					<artifactId>webdrivermanager</artifactId>
+					<version>5.6.2</version>
+				</dependency>
+
+				<!-- Apache Commons IO (for file operations like screenshots) -->
+				<dependency>
+					<groupId>commons-io</groupId>
+					<artifactId>commons-io</artifactId>
+					<version>2.11.0</version>
+				</dependency>
+			</dependencies>
+
+			<build>
+				<plugins>
+
+
+✅ Key Points
+
+	Dependencies: Selenium, TestNG, WebDriverManager (optional), Commons IO.
+	Surefire Plugin: Runs TestNG tests using testng.xml.
+	Java Version: Set to 11 (you can change as needed).
+	
+-------------------------------------------------------------------------------------
+Jenkins CI/CD:-
+
+Jenkins CI/CD is a popular open-source automation server used to implement Continuous Integration (CI) and Continuous Delivery/Deployment (CD) in software projects.
+
+✅ What is CI/CD?
+
+	Continuous Integration (CI):
+	Developers frequently merge code changes into a shared repository. Jenkins automatically builds and tests the code after each commit.
+	Continuous Delivery/Deployment (CD):
+	Automates the process of deploying tested code to staging or production environments.
+
+
+✅ Why Jenkins?
+
+	Automates build, test, and deployment processes.
+	Integrates with Maven, Gradle, Git, Docker, Kubernetes, and many more.
+	Supports plugins for almost any tool in the DevOps ecosystem.
+	Provides pipeline as code using Jenkinsfile.
+
+
+✅ Key Components
+
+	Jobs/Projects: Define tasks like build, test, deploy.
+	Plugins: Extend functionality (e.g., GitHub, Selenium, Docker).
+	Pipeline: Scripted or declarative workflows for CI/CD.
+	Jenkinsfile: Stores pipeline configuration in source control.
+
+
+✅ Basic CI/CD Flow with Jenkins
+
+	Developer commits code → GitHub/GitLab.
+	Jenkins triggers build (via webhook or polling).
+	Build & Test using Maven/TestNG/Selenium.
+	Generate reports (JUnit/TestNG HTML reports).
+	Deploy to staging or production (optional).
+
+
+✅ Sample Jenkins Pipeline (Declarative)	
+	pipeline {
+		agent any
+		stages {
+			stage('Checkout') {
+				steps {
+					git 'https://github.com/example/selenium-project.git'
+				}
+			}
+			stage('Build') {
+				steps {
+					sh 'mvn clean install'
+				}
+			}
+			stage('Test') {
+				steps {
+					sh 'mvn test'
+				}
+			}
+			stage('Deploy') {
+				steps {
+					echo 'Deploying application...'
+				}
+			}
+		}
+	}
+
+---------------------------------------------------------------------------------------	
+How to integrate Selenium tests with Jenkins (including TestNG reports)?
+
+✅ Integrating Selenium + TestNG with Jenkins
+
+
+1.Install Required Tools & Plugins
+
+	Jenkins with Java installed.
+	Install Plugins:
+
+	Maven Integration (for build)
+	Git (if using a repository)
+	TestNG plugin (to parse and display TestNG reports) [plugins.jenkins.io], [lambdatest.com]
+
+
+
+
+
+2.Configure Maven in Jenkins
+
+	In Jenkins → Manage Jenkins → Global Tool Configuration, define:
+
+	JDK installation
+	Maven installation path
+
+
+	Ensure MAVEN_HOME and Java paths are set up correctly [guru99.com], [softwarete...terial.com]
+
+
+
+3.Create a Pipeline Job
+
+	New Item → Select Pipeline
+	Set up SCM (e.g., Git URL)
+	Use a Jenkinsfile stored in your repo
+
+
+
+4.Sample Declarative Jenkinsfile
+		
+	pipeline {
+		agent any
+		tools { maven 'Maven 3.8.8' }
+		stages {
+			stage('Checkout') { steps { git 'https://github.com/your/selenium-project.git' } }
+			stage('Build & Test') { steps { sh 'mvn clean test' } }
+		}
+		post {
+			always {
+				junit '**/target/surefire-reports/*.xml'
+				testngPublisher testNGXmls: '**/testng-results.xml'
+			}
+		}
+	}
+
+	mvn clean test runs Selenium tests with Maven + TestNG
+	junit and testngPublisher publish test results [guru99.com], [lambdatest.com]
+
+
+
+5.Configure Post-Build Reporting
+
+	Or for freestyle jobs: add “Publish TestNG Results” as a Post-build Action
+	Ensure your TestNG suite XML generates the testng-results.xml file
+	Jenkins will show test summaries, pass/fail counts, and tracebacks [plugins.jenkins.io], [lambdatest.com], [cpsat.agil...liance.org]
+
+
+-----------------------------------------------
+Explain Jenkins + Maven setup for automation?
+
+🚀 Jenkins + Maven Setup for Automation
+
+Maven handles:
+
+	Dependencies (Selenium, TestNG, WebDriverManager)
+	Build lifecycle (clean, compile, test)
+	Reports (target/surefire-reports, testng-results.xml)
+
+
+Jenkins triggers Maven via:
+
+	Freestyle job: mvn clean test command
+	Pipeline job: use sh 'mvn clean test' with Maven tool wrapper
+
+
+After build, Jenkins:
+
+	Parses test reports
+	Archives artifacts (optional)
+	Sends notifications on failure or success	
+
+
+-----------------------------------------------------------
+Jenkins CI/CD Pipeline Architecture:-
+
+	[ Source Code Repo (Git) ]
+			   ↓ (Webhook)
+		[ Jenkins Pipeline Job ]
+			   ↓
+	 [ Checkout Code & Jenkinsfile ]
+			   ↓
+	  [ Maven Build # clean → compile → test ]
+			   ↓
+	 [ Execute Tests (Selenium + TestNG) ]
+			   ↓
+	 [ Generate Reports: Surefire & testng-results.xml ]
+			   ↓
+	 [ Jenkins Post Actions:
+		 • Publish JUnit report
+		 • Publish TestNG results
+		 • Archive artifacts / trigger deployments
+	   ]
+			   ↓
+		 [ Dashboard with Reports & Notifications ]
+		 
+This design ensures automatic builds and testing on every code change, immediate visibility into failures, and continuous delivery readiness.
+
+---------------
+---------------
+
+Explain  Jenkins CI/CD Pipeline Architecture:-		 
+
+The diagram you provided represents a Jenkins CI/CD Pipeline Architecture in a simplified form. Here’s the explanation:
+
+✅ Components in the Diagram
+
+
+1.Source Code Repository
+
+	This is where your application code resides (e.g., GitHub, GitLab, Bitbucket).
+	Jenkins pulls the latest code from this repository when triggered by a commit or a scheduled job.
+
+
+
+2.Jenkins
+
+	Acts as the automation server.
+	Orchestrates the entire CI/CD process by executing defined jobs or pipelines.
+
+
+
+3.Build & Test Stage
+
+	Jenkins uses tools like Maven or Gradle to build the application.
+	Runs automated tests (e.g., Selenium + TestNG) to validate functionality.
+	Generates reports (JUnit/TestNG HTML reports).
+
+
+
+4.Test Reports
+
+	Jenkins collects and publishes test results for visibility.
+	Helps teams quickly identify failures and fix issues.
+
+
+
+5.Deploy Stage
+
+	After successful build and test, Jenkins deploys the application to staging or production environments.
+	Can integrate with tools like Docker, Kubernetes, or cloud services for deployment.
+
+
+
+
+✅ Flow
+
+	Commit → Jenkins Trigger → Build & Test → Generate Reports → Deploy
+	This ensures Continuous Integration (code is tested on every commit) and Continuous Delivery/Deployment (code is ready or automatically deployed).
+	
+
+---------------------------------------------------------	

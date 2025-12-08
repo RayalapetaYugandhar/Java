@@ -1,0 +1,69 @@
+//div[contains(normalize-space(),'Connecting')]
+
+//sc-button[@id='submitButton']
+
+//label[normalize-space()='Phone Number / Email']
+
+//div[@class='footer-text-links']//a[@id='aboutUsLink']
+
+driver.findElement(By.xpath("(//img[@alt="Target's logo shows they are a SimpleTexting customer"])[1]"))
+
+//img[@alt="Target's logo shows they are a SimpleTexting customer"]
+
+//button[@aria-label='Quick reply: I need help getting started with text marketing']
+
+//h1[@class='txr-section__title txr-h']
+
+//button[@data-test-id='available-date'][span='15']
+
+//span[@aria-label='12:10 am on October 15th']
+
+//input[@data-test-id='confirm-firstName-field']
+
+//input[@aria-label='password']
+
+//ion-button[@id='submitButton']
+
+//a[contains(normalize-space(), 'Contact Us')]
+
+//div[@class='txr-section__buttons']//a[@class='txr-button-link']
+
+//input[@aria-controls='pr_id_1_list']
+
+//div[@class='h_menu_drop_button hidden-xs']
+
+//a[@aria-label='Sweep from and to station.']
+
+//li[@data-cy='menu_Hotels']
+
+//span[@class='fltSwipCircle']
+
+//span[contains(normalize-space(), 'Cruise')]
+
+(//a[@class='increment'][normalize-space()='+'])[1]
+
+MakeMytrip:-
+
+//div[contains(text(), 'Student')]
+
+//span[contains(text(),'Continue')]
+
+//button[@data-cy='continueBtn']
+
+//input[@data-cy='userName']
+
+//div[contains(normalize-space(),'Sign in with Google. Opens in new tab')]
+
+//input[@id='travellers']
+
+//p[@data-cy='LoginHeaderText']
+
+//ul[@class='userSection pushRight']//p[contains(text(),'List Your Property')]
+
+//a[contains(text(),'Videograph')]
+
+//span[@class='mobile-menu-toggle__icon wpex-flex']
+
+//span[contains(normalize-space(),'Find out more!')]
+
+//a[contains(text(),'Feminine')]
