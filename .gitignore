@@ -1,0 +1,79 @@
+# ---- Java ----
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ---- IntelliJ IDEA ----
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+
+# IntelliJ cache
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+
+# ---- Eclipse ----
+.project
+.classpath
+.c9/
+.settings/
+.target/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- Maven ----
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ---- Gradle ----
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ---- OS generated files ----
+.DS_Store
+Thumbs.db
+
+# ---- Temporary Files ----
+temp/
+*.tmp
+*.swp
+*.swo
+
+# ---- Backup Files ----
+*~
+*.bak
+*.backup
+
+# ---- JetBrains IDEs ----
+/.idea/
+*.iml
