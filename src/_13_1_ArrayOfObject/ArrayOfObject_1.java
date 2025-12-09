@@ -32,7 +32,7 @@ public class ArrayOfObject_1 {
 		
 		for(Employee std : student )          /*Enhanced for loop or for each loop*/
 		{
-			System.out.println(std.name + ":" + std.rollno + ":" + std.marks);  /*Here we did the - concatenation*/
+			System.out.println(std.name + " : " + std.rollno + " : " + std.marks);  /*Here we did the - concatenation*/
 		}
 	}
 

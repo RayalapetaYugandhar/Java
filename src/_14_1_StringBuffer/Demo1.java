@@ -6,6 +6,20 @@ public class Demo1 {
 		StringBuffer sb = new StringBuffer("Yugandhar");
 		
 		System.out.println(sb.capacity());
+
+		System.out.println(sb.length());
+
+		sb.append(" Babu");		
+		System.out.println(sb);
+
+		sb.deleteCharAt(2);
+		System.out.println(sb);
+
+		sb.insert(0, "Rayalapeta ");
+		System.out.println(sb);
+		
+		sb.insert(11, "yuga ");
+		System.out.println(sb);
 				
 	}
 

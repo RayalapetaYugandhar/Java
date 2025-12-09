@@ -1,0 +1,134 @@
+Key concepts first
+
+
+Instance variables (brand, price):
+Each object (obj1, obj2, …) gets its own copy. Changing one object doesn’t affect others.
+
+
+Static variable (name):
+Belongs to the class, not to any one object. There is only one name shared by all Mobile2 objects. If you change it anywhere, it changes for all.
+
+
+Constructor:
+A special method that runs when you create an object (new Mobile2(...)) to initialize fields.
+
+
+Static initializer block:
+Runs once when the class is loaded, good for setting default values for static fields.
+
+
+
+What the added parts do
+1) Static initializer
+
+    static {
+        name = "SmartPhone";
+    }
+
+    Runs once when Mobile2 is first used (class loading time).
+    Sets a default value for the shared static field name.
+
+2) No-arg constructor
+        
+    public Mobile2() {
+        this.brand = "Unknown";
+        this.price = 0;
+    }
+
+Runs when you call new Mobile2() without parameters.
+Initializes instance fields to some defaults so the object isn’t in a “blank” state.
+
+3) Parameterized constructor (instance fields)
+
+
+    public Mobile2(String brand, int price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
+Runs when you call new Mobile2("Samsung", 4000).
+Sets only the instance fields. Leaves the static name alone (so you don’t surprise other objects).
+
+4) Parameterized constructor that also sets static field
+
+
+    public Mobile2(String brand, int price, String className) {
+        this.brand = brand;
+        this.price = price;
+        Mobile2.name = className; // changes for ALL Mobile2 objects    Mobile2.name = className; // changes for ALL Mobile2 objects
+
+This is powerful and risky: updating name here modifies a class-wide value, affecting existing and future objects.
+
+5) show() method
+
+    public void show() {
+        System.out.println(name + ":" + brand + ":" + price);
+    }
+
+Prints the current shared name plus the object’s own brand and price.
+
+
+Step-by-step: what happens in main
+
+
+Mobile2 obj1 = new Mobile2();
+obj1.brand = "Apple";
+obj1.priceobj1.price = 5000;
+
+new Mobile2() calls the no-arg constructor → sets brand="Unknown", price=0 initially.
+Then you overwrite those values (Apple, 5000).
+Mobile2.name = "SmartPhone" sets the shared name.
+
+Mobile2 obj2 = new Mobile2("Samsung",
+
+Calls the 2‑arg constructor → sets obj2.brand="Samsung", obj2.price=4000.
+name remains whatever it was last set to ("SmartPhone" for now).
+
+
+Mobile2.name = "phone";
+``
+
+Changes the shared name for all instances. Now both obj1 and obj2 see name="phone".
+
+obj1.show(); // prints: phone:Apple:5000
+obj2.show(); // prints: phone:Samsung
+
+Mobile2 obj3 = new Mobile2("OnePlus", 4500, "Handset");
+Calls the 3‑arg constructor → sets brand, price, and changes the static name to "Handset" (for everyone).
+
+obj1.show(); // Handset:Apple:5000
+obj2.show(); // Handset:Samsung:4000
+obj3.show(); // Handset:OnePlus:4500
+``
+Why use multiple constructors?
+This is constructor overloading—providing different ways to create objects:
+
+Mobile2() → quick object with defaults.
+Mobile2(brand, price) → set per-object fields cleanly on creation.
+Mobile2(brand, price, name) → occasionally set class-wide behavior during creation (use with care).
+
+If you don’t need to set the static name inside a constructor, you can omit the 3‑arg version and instead set Mobile2.name explicitly in code where it makes logical sense (like configuration time).
+
+Common pitfalls & best practices
+
+
+Accidental static change:
+If you put name assignments in normal constructors, every new object could unexpectedly change it. Keep static updates explicit (either in the static block or a clearly named setter/constructor).
+
+
+Default constructor disappears if you add one:
+If you define any constructor, Java won’t auto-create a no-arg constructor. If you need it, declare it explicitly (as we did).
+
+
+Prefer immutability for static config:
+If name is more like a constant, consider making it final static and setting it once:
+
+static final String name = "
+(Then you can’t change it at runtime.)
+
+
+TL;DR
+
+Instance fields (brand, price) belong to the object → set them in constructors.
+Static field (name) is shared → set it once (static block) or explicitly (e.g., Mobile2.name = ...).
+Overloaded constructors give flexibility without mixing up instance vs class-wide state.

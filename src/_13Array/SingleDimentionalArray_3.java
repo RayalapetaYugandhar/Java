@@ -13,6 +13,12 @@ public class SingleDimentionalArray_3 {
 		{
 			System.out.println(num[i]);
 		}
+
+
+		for(int n : num)    // both will work same
+		{
+			System.out.println(n);
+		}
 		
 	}
 

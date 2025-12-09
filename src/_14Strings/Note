@@ -54,4 +54,22 @@ public class String_3 {
 				> All methods are same in both 
 				
 				
--->> Lenght and capacity both are two different things 			
+-->> Lenght and capacity both are two different things 		
+
+
+String is not a primitive data type, it is a class in java.
+So when we create the String object using new keyword, internally it will create the object in heap memory.
+And the reference variable will be created in stack memory.	
+
+
+
+Here are the 8 primitive data types in Java
+
+		byte
+		short
+		int
+		long
+		float
+		double
+		char
+		boolean

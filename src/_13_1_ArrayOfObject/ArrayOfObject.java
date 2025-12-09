@@ -1,7 +1,7 @@
 package _13_1_ArrayOfObject;
 
-class Students{
-	int rollno;
+class Student{    //object
+	int rollno;   // instant varibales
 	String name;
 	int marks;
 }
@@ -9,30 +9,44 @@ class Students{
 public class ArrayOfObject {
 	public static void main(String []args)
 	{
-		Students S1 = new Students();
+		Student S1 = new Student();  // reference object
 		S1.rollno = 1;
 		S1.name = "Yugandhar";
 		S1.marks = 96;
 		
-		Students S2 = new Students();
+		Student S2 = new Student();
 		S2.rollno = 2;
 		S2.name = "King";
 		S2.marks = 99;
 		
-		Students S3 = new Students();
+		Student S3 = new Student();
 		S3.rollno = 3;
 		S3.name = "Kong";
 		S3.marks = 89;
 		
-		Students student[] = new Students[3];
+		Student students[] = new Student[3];   // 'students' is variable here and we are storing 'Student' data in 'students[]' array 
 		
-		student[0] = S1;
-		student[1] = S2;
-		student[2] = S3;
+		students[0] = S1;   //assigning objects to array
+		students[1] = S2;
+		students[2] = S3;
 		
 		for(int i=0; i<=2; i++)
 		{
-			System.out.println(student[i].name + ":" + student[i].rollno + ":" + student[i].marks);
+			System.out.println(students[i].name + " : " + students[i].rollno + " : " + students[i].marks);
+		}
+		
+		System.out.println();
+
+		for(int i=0; i<students.length; i++)   //all loops will work same
+		{
+			System.out.println(students[i].name + " : " + students[i].rollno + " : " + students[i].marks);
+		}
+		
+		System.out.println();
+		
+		for(Student std : students )          /*Enhanced for loop or for each loop*/
+		{
+			System.out.println(std.name + " : " + std.rollno + " : " + std.marks);  /*Here we did the - concatenation*/
 		}
 	}
 
