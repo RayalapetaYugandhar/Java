@@ -1,7 +1,7 @@
 
 package _16StaticBlock;
 
-class Mobile {
+class Mobiles {
     int price;         // Instance variable: unique per object
     String brand;      // Instance variable: unique per object
     static String name; // Static variable: shared by ALL Mobile objects
@@ -34,17 +34,19 @@ public class StaticBlock1 {
         // First object creation:
         // 1) If Mobile class isn't loaded yet, static block runs once.
         // 2) Constructor runs for obj1.
-        Mobile obj1 = new Mobile();
+        Mobiles obj1 = new Mobiles();
 
         // Set per-object fields
         obj1.brand = "Apple";
         obj1.price = 5000;
 
         // Change the static field: affects ALL Mobile objects
-        Mobile.name = "SmartPhone"; // ✅ Fixed: use Mobile.name (not Mobile2.name)
+        Mobiles.name = "SmartPhone"; // ✅ Fixed: use Mobile.name (not Mobile2.name)
 
 
-         Mobile obj2 = new Mobile(); // it will call default constructor created by compiler // Object 2 dont have any values assigned, so it will take default values from constructor
+         Mobiles obj2 = new Mobiles(); // it will call default constructor created by compiler 
+                                       // Object 2 dont have any values assigned, so it will take default values from constructor,
+                                       //  here we have not created constructor so it will take default values 0 for int and null for String
 
         // Optional: see current state
         obj1.show(); // SmartPhone:Apple:5000

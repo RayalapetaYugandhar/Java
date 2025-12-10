@@ -7,9 +7,11 @@ class StaticMet {
     public void show() {
         System.out.println(brand + ":" + price + ":" + name);
     }
+
+    // static method
     public static void show1(StaticMet st) {          //// with the object reference we can 
                                                             // call both static and non-static method and variable in static method
-        System.out.println(st.brand + ":" + st.price + ":" + name);
+        System.out.println(st.brand + ":" + st.price + ":" + name); // 'name' is static variable we can use directly
     }
 }
 public class StaticMethod {

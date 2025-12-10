@@ -1,0 +1,29 @@
+
+// Constructo looks like a method but it does not have a return type
+// Constructor name must be same as class name
+// Constructor is used to initialize the object
+// If we do not create a constructor Java provides a default constructor
+// We can create our own constructor (parameterized constructor or no-arg constructor)
+// Constructor is called when we create an object of the class  
+// We can have multiple constructors in a class (constructor overloading)
+// Constructor can have access modifiers (public, private, protected, default)
+// Constructor cannot be inherited
+// Constructor can call another constructor using this() keyword
+
+// Example:
+// class Person {
+//     String name;
+//     int age;
+
+//     // No-arg constructor
+//     public Person() {
+//         this.name = "Unknown";
+//         this.age = 0;
+//     }
+
+//     // Parameterized constructor
+//     public Person(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
