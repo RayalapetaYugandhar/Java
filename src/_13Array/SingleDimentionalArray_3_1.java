@@ -5,7 +5,7 @@ public class SingleDimentionalArray_3_1 {
     public static void main(String[] args) {
         // Declare and allocate a 1D int array with 3 elements.
         // Initially, all elements are 0 by default.
-        int[] num = new int[3];
+        int num[] = new int[3];
 
         // Loop over indices 0, 1, 2 to fill the array.
         // for int Casting to int truncates the decimal, resulting in integers 0–9.        

@@ -11,15 +11,16 @@ class Mobile {
     static {    //static block is used to initialize static variables
         name = "SmartPhone"; // Initialize the class-wide 'name'
         System.out.println("in static block"); // Log to show static block execution
-    }
+    }  
+                         
+    // if we don't create constructor then also default constructor will be created by compiler
 
-    // No-arg (default) constructor:
-    // Runs EVERY time you create an object: new Mobile()
-    public Mobile() {   //here we are creating a constructor and initializing instance variables
-        brand = "";     // Default instance state
-        price = 110;    // Default instance state
-        System.out.println("in constructor default"); // Log constructor execution
-    }
+
+   //  public Mobile() {   //here we are creating a constructor and initializing instance variables
+   //      brand = "";     // Default instance state
+   //      price = 100;    // Default instance state
+   //      System.out.println("in constructor default"); // Log constructor execution
+   //  }
 
     // Instance method: prints the shared name and this object's brand/price
     public void show() {
@@ -27,7 +28,7 @@ class Mobile {
     }
 }
 
-public class StaticBlock {
+public class StaticBlock1 {
     public static void main(String[] a) {
 
         // First object creation:
@@ -42,13 +43,12 @@ public class StaticBlock {
         // Change the static field: affects ALL Mobile objects
         Mobile.name = "SmartPhone"; // ✅ Fixed: use Mobile.name (not Mobile2.name)
 
-        // Second object creation:
-        // Constructor runs again for obj2 (static block DOES NOT run again)
-        Mobile obj2 = new Mobile();   // Object 2 dont have any values assigned, so it will take default values from constructor
+
+         Mobile obj2 = new Mobile(); // it will call default constructor created by compiler // Object 2 dont have any values assigned, so it will take default values from constructor
 
         // Optional: see current state
         obj1.show(); // SmartPhone:Apple:5000
-        obj2.show(); // SmartPhone::110
+        obj2.show(); // SmartPhone::0
     }
 }
 
