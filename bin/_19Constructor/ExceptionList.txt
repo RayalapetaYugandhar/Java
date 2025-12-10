@@ -1,0 +1,80 @@
+🎯 Top Java Exceptions (Cheat Sheet List)
+✅ 1. Invalid Input / Arguments
+
+IllegalArgumentException
+
+NumberFormatException
+
+ArithmeticException (divide by zero)
+
+✅ 2. Null or Missing Data
+
+NullPointerException
+
+✅ 3. Wrong Object State
+
+IllegalStateException
+
+✅ 4. Out of Range / Boundaries
+
+IndexOutOfBoundsException
+
+ArrayIndexOutOfBoundsException
+
+StringIndexOutOfBoundsException
+
+✅ 5. Unsupported / Not Implemented
+
+UnsupportedOperationException
+
+✅ 6. General Validation
+
+ValidationException (Jakarta/Javax, used in enterprise apps)
+
+✅ 7. I/O Related
+
+IOException
+
+FileNotFoundException
+
+EOFException
+
+✅ 8. Class / Reflection Issues
+
+ClassNotFoundException
+
+NoSuchMethodException
+
+InstantiationException
+
+✅ 9. Threading / Concurrency
+
+InterruptedException
+
+ConcurrentModificationException
+
+✅ 10. Custom Exceptions (Your Own)
+
+You create these for clean project code:
+
+UserValidationException
+
+InvalidAgeException
+
+InvalidIdException
+
+etc.
+
+💥 Bonus: Most Used in Automation & Testing (Your Field)
+
+Since you’re an Automation QA Engineer, these matter for you:
+
+AssertionError
+
+TimeoutException (Selenium)
+
+NoSuchElementException (Selenium)
+
+StaleElementReferenceException
+
+WebDriverException
