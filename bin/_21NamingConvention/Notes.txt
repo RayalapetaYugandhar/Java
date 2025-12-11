@@ -1,0 +1,28 @@
+class and interface - Calc , Runable
+varibales and method - marks, show()
+constants -PIE, BRAND
+
+
+class name should start with Capital letter - Calculator 
+    Ex:- class Calculator {}
+
+interface name should start with Capital letter - Runable
+
+varibales and method should start with small letter - marks, show() 
+    Ex:-  int results = 10; 
+    Ex:-  public int add()  {}
+
+Constant name should be all Capital letter
+    Ex:- BRAND, DATA
+
+Camel casing:-
+    showmymarks should be = ShowMyMarks
+
+Snak casing:-
+    showmymarks should be  = Show_My_Marks
+
+Constructor:-
+
+    Human();   - Constructor name should be same as class name, so class name should start with Capital letter
+
+                same as class name with bracket 
