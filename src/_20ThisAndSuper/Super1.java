@@ -1,28 +1,30 @@
 package _20ThisAndSuper;
 
-class A{
-    public A(){  // Default Constructor
+class AI{
+    public AI(){  // Default Constructor
         System.out.println("Class A");
     }
 
-    public A(int n){
+    public AI(int n){
         System.out.println("Class A with parameter");
     }
 }
-class B extends A{  // Default Constructor extends another Default Constructor
-    public B(){        
+class BI extends AI{  // Default Constructor extends another Default Constructor
+    public BI(){        
         System.out.println("Class B");
     }   
-    public B(int n){
+    public BI(int n){
         super(n);
         System.out.println("Class B with parameter");
     }
 }
 public class Super1 {
     public static void main(String []args) {
-        B ex = new B(5);
+        BI ex = new BI(5);
     }
 }
+
+//changed names A - AI and B - BI
 
 //here i have removed super(), if we don't write super() in child class constructor, 
 // compiler will add it automatically as first statement of child class constructor

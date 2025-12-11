@@ -1,32 +1,33 @@
 package _20ThisAndSuper;
 
-class A{     // every class in java extends the object class
-    public A(){  // Default Constructor
+class AG{     // every class in java extends the object class
+    public AG(){  // Default Constructor
         super();
         System.out.println("Class A");
     }
 
-    public A(int n){
+    public AG(int n){
         super();
         System.out.println("Class A with parameter");
     }
 }
-class B extends A{  // Default Constructor extends another Default Constructor
-    public B(){        
+class BG extends AG{  // Default Constructor extends another Default Constructor
+    public BG(){        
         super();
         System.out.println("Class B");
     }   
-    public B(int n){
+    public BG(int n){
         super(n); //We are mentioning super explicitly
         System.out.println("Class B with parameter");
     }
 }
 public class Super {
     public static void main(String []args) {
-        B ex = new B(5);
+        BG ex = new BG(5);
     }
 }
 
+//changed names A - AG and B - BG
 
 //Answer:-
 

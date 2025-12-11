@@ -1,34 +1,34 @@
 package _20ThisAndSuper;
 
-class A{
-    public A(){  // Default Constructor
+class TH{
+    public TH(){  // Default Constructor
         super();     
         System.out.println("Class A");
     }
 
-    public A(int n){
+    public TH(int n){
         super();     
         System.out.println("Class A with parameter");
     }
 }
 
-class B extends A{  // Default Constructor extends another Default Constructor
-    public B(){   
-        super();   // calling parameterized constructor of class A
+class BH extends TH{  // Default Constructor extends another Default Constructor
+    public BH(){   
+        super();   // calling parameterized constructor of class TH
         System.out.println("Class B");
     }   
-    public B(int n){    
+    public BH(int n){    
         this();    
         System.out.println("Class B with parameter");
     }
 }
 public class This {
     public static void main(String []args) {
-        B ex = new B(10);
+        BH ex = new BH(10);
     }
 }
 
-
+//changed names A - TH and B - BH
 
 // "this" method will execute the constructor of a same class
 // "super" mothod will execute the constructor of a super class
