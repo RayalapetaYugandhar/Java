@@ -1,0 +1,73 @@
+
+                        Private               Protected         Public          Default
+
+same class                  Yes                 Yes                 Yes             Yes                 
+
+same package                No                  Yes                 Yes             Yes
+subclass
+
+same package                No                  Yes                 Yes             Yes
+non-subclass
+
+Different package           No                  Yes                 Yes             No
+subclass
+
+Different package           No                   No                   Yes            No
+non-subclass    
+
+
+
+
+
+✅ Explanation by Scenario:
+
+
+Same Class
+
+All modifiers (private, protected, public, default) are accessible because you're inside the same class.
+
+
+
+Same Package – Subclass
+
+    private: ❌ Not accessible outside its own class.
+    protected: ✅ Accessible because subclass inherits it.
+    public: ✅ Accessible everywhere.
+    default: ✅ Accessible because it's in the same package.
+
+
+
+Same Package – Non-subclass
+
+    private: ❌ Not accessible.
+    protected: ✅ Accessible because same package.
+    public: ✅ Accessible everywhere.
+    default: ✅ Accessible because same package.
+
+
+
+Different Package – Subclass
+
+    private: ❌ Not accessible.
+    protected: ✅ Accessible because subclass inherits it (even if in different package).
+    public: ✅ Accessible everywhere.
+    default: ❌ Not accessible because different package.
+
+
+
+Different Package – Non-subclass
+
+    private: ❌ Not accessible.
+    protected: ❌ Not accessible (only works for subclasses).
+    public: ✅ Accessible everywhere.
+    default: ❌ Not accessible because different package.
+
+
+
+
+✅ Key Points:
+
+    private → Only inside the same class.
+    default → Only inside the same package.
+    protected → Same package + subclasses (even in different packages).
+    public → Everywhere.

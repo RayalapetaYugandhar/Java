@@ -1,0 +1,70 @@
+package _22Inheritance;
+
+public class Calc {
+    public static void main(String []args) {
+        // Calculator p = new Calculator();  // creating object of parent class //we have parent class methods in parent class only
+        AdvanceCalculator p = new AdvanceCalculator();  // creating object of parent class        
+
+        int r1 = p.add(3, 8);  // calling method of parent class
+        int r2 = p.sub(5, 2);
+        int r3 = p.mul(7, 4);
+        int r4 = p.div(4, 2);
+
+        System.out.println("Addition: " + r1);
+        System.out.println("Subtraction: " + r2);
+        System.out.println("Multiplication: " + r3);
+        System.out.println("Division: " + r4);
+    }
+}
+
+
+// child class or sub class - both are same
+
+// In inheritance even if we don't have java file of parent class still we can inherit the parent class methods and properties in child class
+// if we have java file of parent class then also we can inherit the parent class methods and properties in child class
+
+// parent class is Calculator class
+// Child class is AdvanceCalculator class
+
+// Inheritance is the process of child class can inherit the properties and behaviors (methods) of parent class.
+
+// child class can have its own methods and properties in addition to the parent class methods and properties.
+
+// here parent class have add and sub methods
+// here child class have mul and div methods in addition to parent class methods add and sub
+
+// with help of "extends" keyword we can inherit the parent class methods and properties in child class
+
+
+// first we have parent class Calculator
+// then we have child class AdvanceCalculator
+// we are inheriting the parent class Calculator in child class AdvanceCalculator, with help of "extends" keyword
+// then we have created reference variable of child class AdvanceCalculator in main method of Calc class
+// then we are able to access both parent class methods and child class methods with help of child class reference variable
+// and we have assigned the return values of methods to different variables and printed them
+
+
+
+
+// How it will work ?
+                /*        Parent 
+                            ^
+                        Child or Sub                    // single level inheritance
+                            ^
+                    Grand Child or Sub Child             // Multilevel Inheritance
+                            ^
+                Great Grand Child or Sub Sub Child       // Multilevel Inheritance
+
+                 */
+
+
+ // we can achieve multilevel inheritance with help of inheritance
+// we can achieve hierarchical inheritance with help of inheritance
+
+// With help of inheritance we can achieve code reusability
+// we are reusing the parent class methods in child class with help of extends keyword
+
+// we can achieve method overriding with help of inheritance
+// we can achieve runtime polymorphism with help of inheritance
+
+
