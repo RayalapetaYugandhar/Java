@@ -1,0 +1,147 @@
+                                            Polymorphism
+                                    
+                            poly - many                         morphism - Behaviour
+
+Same obejct having different Behaviour in different situation                            
+Polymorphism is 2 types
+
+1. Compile time Polymorphism is also called early binding 
+2. Run time Polymorphism  is also called lately binding 
+
+-----------------------------
+
+✅ Polymorphism in Java
+
+Poly = Many
+Morphism = Behaviour
+So, Polymorphism means “one entity showing many behaviours” depending on the situation.
+
+Example:
+
+A person can be a father, employee, or customer in different contexts.
+In Java, the same method name can perform different actions based on the object or parameters.
+
+
+✅ Types of Polymorphism
+Java supports two types:
+
+1. Compile-time Polymorphism (Early Binding)
+
+    Achieved by Method Overloading.
+    The method call is resolved at compile time.
+    Example:
+
+    class Calculator {
+        public int add(int a, int b) {
+            return a + b;
+        }
+        public int add(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+    public class Test {
+        public static void main(String[] args) {
+            Calculator calc = new Calculator();
+            System.out.println(calc.add(10, 20));      // calls 2-arg method
+        }
+    }
+
+    // while compile we are passing arrguments which method to call
+
+2. Run-time Polymorphism (Late Binding)
+
+    Achieved by Method Overriding.
+    The method call is resolved at runtime based on the object type.
+    Example:
+
+    class Animal {
+        public void sound() {
+            System.out.println("Animal makes sound");
+        }
+    }
+    class Dog extends Animal {
+        @Override
+        public void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+    public class Test {
+        public static void main(String[] args) {
+            Animal a = new Dog(); // reference is        Animal a = new Dog(); // reference is Animal, object is Dog
+            a.sound(); // Output: Dog barks (runtime decision)
+        }
+    }
+
+    Answer:-
+        Dog barks
+
+
+✅ Why?
+
+
+    Animal a = new Dog();
+    Here, the reference type is Animal, but the object type is Dog.
+
+
+    When you call a.sound();, Java uses runtime polymorphism (also called dynamic method dispatch).
+    The method that gets executed depends on the actual object type (Dog), not the reference type (Animal).
+
+
+    Since Dog overrides sound() from Animal, the overridden method in Dog is called.
+
+
+
+    ✅ Key Concept:
+
+    Compile-time decision: Which methods exist for the reference type.
+    Runtime decision: Which overridden method to execute based on the object type.
+
+
+-----------------------------------------
+✅ Names for Runtime Polymorphism
+
+
+    Dynamic Polymorphism
+
+            Because the method call is resolved dynamically at runtime.
+
+    Late Binding
+
+            Binding of the method to the object happens late (at runtime), not at compile time.
+
+    Dynamic Method Dispatch
+
+            The process of selecting the correct overridden method based on the actual object type at runtime.
+
+    Method Overriding
+
+             The mechanism used to achieve runtime polymorphism in Java.
+
+    ✅ Why so many names?
+
+    All these terms describe the same concept from different perspectives:
+
+    Polymorphism → Many behaviours.
+    Dynamic → Happens at runtime.
+    Dispatch → Deciding which method to call.
+    Late Binding → Binding delayed until runtime.   
+
+-----------------------------------------------------
+✅ Compile-time Polymorphism
+
+Also called Early Binding because the method call is resolved at compile time.
+Achieved through Method Overloading (same method name, different parameter list in the same class).
+
+✅ Other Names for Compile-time Polymorphism:
+
+    Static Polymorphism
+
+            Because the method to call is decided statically at compile time.
+
+    Early Binding
+
+             Binding happens early (during compilation), not at runtime.
+
+    Method Overloading
+
+            The actual mechanism used to implement compile-time polymorphism.
