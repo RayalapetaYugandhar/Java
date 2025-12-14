@@ -1,6 +1,6 @@
 //We can use "Final" keyword with - Variable, Class, Method
 
-package _27Final;
+package _27FinalKeyword;
 
 public class FinalVariable {
     public static void main(String []args) {
