@@ -1,0 +1,81 @@
+// if you have all abstract methods in a class, then instead of craete a class, we can create a interface 
+// To achieve interface we have to use "implements" in child class
+
+// To inherit the feature and properties present in parent class we use "extends" keyword in child class
+
+// To inherit the feature and properties present in interface we use "implements" keyword in child class
+
+//If we are implementing the child class with the reference of parent, then we have to define all methods present in parent 
+
+//If you wright any public method with body in interface it won't allow, you can write default, static, private methods with body
+
+
+----------------------------------------
+
+The main use of an interface in Java is to define a contract or blueprint for classes without specifying how the methods should be implemented. Here’s why interfaces are important:
+
+✅ Uses of Interfaces
+
+
+Achieve Abstraction
+
+    Interfaces allow you to define what a class should do, not how it should do it.
+    Example: interface Vehicle { void start(); }
+    Any class implementing Vehicle must provide its own start() logic.
+
+
+
+Support Multiple Inheritance
+
+    Java does not allow multiple inheritance with classes (to avoid ambiguity), but a class can implement multiple interfaces.
+    Example:
+
+        interface A { void methodA(); }
+        interface B { void methodB(); }
+        class C implements A, B {
+            public    public void methodA() { ... }
+            public void methodB() { ... }
+        }
+Loose Coupling
+
+    Code depends on interfaces, not concrete classes. This makes systems more flexible and easier to maintain.
+    Example:
+        
+        A obj = new B();  // Program to interface, not implementation
+
+Polymorphism
+
+    Interfaces enable polymorphic behavior. You can refer to different implementations using the same interface type.
+    Example:
+
+
+    A obj = new B();
+    obj.show();  // Calls B's implementation
+
+Standardization
+
+    Interfaces define a common set of methods that multiple classes can implement, ensuring consistency.
+    Example: Comparable, Runnable, Serializable are standard Java interfaces.
+
+
+
+API Design
+
+    Interfaces are widely used in frameworks and libraries to define contracts for users without exposing internal details.
+    Example: JDBC uses interfaces like Connection, Statement.
+
+
+
+
+✅ Real-world examples
+
+    Java Collections Framework: List, Set, Map are interfaces. Classes like ArrayList, HashSet implement them.
+    Event Handling: ActionListener in Swing or Android.
+    Threading: Runnable interface for defining tasks.
+
+
+🔍 Key Points
+
+    All methods in an interface are public and abstract by default (except default and static methods introduced in Java 8).
+    All variables are public static final (constants).
+    Interfaces cannot have constructors because they cannot be instantiated.

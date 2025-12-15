@@ -1,0 +1,54 @@
+✅ Reasons to Use Anonymous Inner Classes
+
+
+Quick One-Time Implementation
+
+    When you need to override a method or provide a custom implementation only once, without creating a separate named class.
+    Example: Event listeners, callbacks, or small customizations.
+
+
+
+Reduces Boilerplate Code
+
+    Instead of writing:
+
+        class MyClass extends Anonymous {
+            public void show() {
+                System.out.println("Custom behavior");
+            }
+        }
+
+    and then creating an object of MyClass, you can do it inline with:
+
+        Anonymous obj = new Anonymous() {
+            public void show() {
+                System.out.println("Custom behavior");
+            }
+        };
+
+Improves Readability for Small Changes
+
+    Keeps related logic close to where it’s used, making code easier to follow.
+
+
+Common in GUI/Event Handling
+
+    For example, in Swing or Android:
+
+    button.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("Button clicked!");
+        }
+    })
+
+    Here, creating a separate class for just one button click would be overkill.
+
+
+
+Works with Abstract Classes and Interfaces
+
+    You can provide implementation for abstract methods or interface methods without creating a named class.
+
+⚠️ When NOT to Use
+
+    If the implementation is large or reused multiple times, a named class is better for clarity and maintainability.
