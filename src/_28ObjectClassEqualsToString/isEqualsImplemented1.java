@@ -1,5 +1,5 @@
 package _28ObjectClassEqualsToString;
-class Computer {
+class Computers {
     String model;
     int price;
     
@@ -13,14 +13,14 @@ class Computer {
         return result;
     }
     
-    public boolean equals(Computer obj) {  //Computer is class and obj is varibale 
+    public boolean equals(Computers obj) {  //Computers is class and obj is varibale 
         if (this == obj)
             return true;
         if (obj == null)
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Computer other = (Computer) obj;
+        Computers other = (Computers) obj;
         if (model == null) {
             if (other.model != null)
                 return false;
@@ -34,28 +34,28 @@ class Computer {
     
 }
 
-        //we have to use "this" for class name(Computer) and we can change variable name "that" to anything - here we use obj for that
+        //we have to use "this" for class name(Computers) and we can change variable name "that" to anything - here we use obj for that
 
 public class isEqualsImplemented1 {
     public static void main(String []args) {
-        Computer comp = new Computer();
+        Computers comp = new Computers();
         comp.model ="Dell";
         comp.price =1000;
 
-        Computer comp1 = new Computer();
+        Computers comp1 = new Computers();
         comp1.model ="Dell";
         comp1.price =1000;
 
-        boolean results = comp.equals(comp1);  // now it won't use this equals(), it will use my equals method present in Computer class
+        boolean results = comp.equals(comp1);  // now it won't use this equals(), it will use my equals method present in Computers class
 
-        System.out.println(results);  //Before creating equals() method in Computer class output - false
-                                      //After creating equals() method in Computer class output - true
+        System.out.println(results);  //Before creating equals() method in Computers class output - false
+                                      //After creating equals() method in Computers class output - true
         
     }
 }
 
 
-// if you want the correct output then we have implement "equals()" method in Computer class
+// if you want the correct output then we have implement "equals()" method in Computers class
 
 
 // This is the reason for above output
