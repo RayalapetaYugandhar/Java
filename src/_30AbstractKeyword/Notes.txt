@@ -1,0 +1,33 @@
+The need for abstract in Java (or any OOP language) arises from the principle of abstraction—hiding implementation details and exposing only essential functionality. Here’s why it’s important:
+
+✅ 1. Enforces a Common Contract
+
+An abstract class defines methods that subclasses must implement.
+Example: Computer declares code(). Every subclass (Laptop, Desktop) must provide its own version.
+This ensures consistency across different implementations.
+
+
+✅ 2. Promotes Polymorphism
+
+You can write code that works on the abstract type, not concrete classes.
+Example: Developer.devApp(Computer machine) works for Laptop, Desktop, or any future Computer type without changing the method.
+
+
+✅ 3. Supports Code Reusability
+
+Abstract classes can have both abstract and concrete methods.
+Common logic can be implemented once in the abstract class and reused by subclasses.
+
+
+✅ 4. Enables Loose Coupling
+
+The client (e.g., Developer) depends on the abstract class, not specific implementations.
+This makes the system flexible and easier to maintain or extend.
+
+
+✅ 5. Real-World Analogy
+Think of an abstract class as a blueprint:
+
+A “Vehicle” abstract class says every vehicle must have start() and stop().
+Car, Bike, Truck implement these differently, but the contract remains the same.
+

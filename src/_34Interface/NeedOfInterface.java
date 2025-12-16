@@ -40,7 +40,7 @@ class Developer {
 public class NeedOfInterface {
     public static void main(String[] args) {
         // Create different implementations of the same interface
-        Computer lap = new Laptop();   // Upcasting to the interface type
+        Computer lap = new Laptop();   // Upcasting to the interface type //interface reference
         Computer desk = new Desktop(); // Upcasting to the interface type
 
         // A Developer who can work with any Computer
