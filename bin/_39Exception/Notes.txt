@@ -1,0 +1,86 @@
+✅ What is an Exception?
+An exception is an event that disrupts the normal flow of a program. It occurs during runtime and indicates an error or unexpected condition.
+
+✅ Types of Exceptions
+
+
+Checked Exceptions
+
+Checked at compile-time.
+Must be handled using try-catch or declared with throws.
+Examples: IOException, SQLException.
+
+
+
+Unchecked Exceptions
+
+Occur at runtime.
+Subclasses of RuntimeException.
+Examples: NullPointerException, ArithmeticException.
+
+
+
+Errors
+
+Serious problems, usually not recoverable.
+Examples: OutOfMemoryError, StackOverflowError.
+
+
+✅ Exception Hierarchy
+Throwable
+   ├── Exception
+   │     ├── Checked Exceptions
+   │     └── Unchecked Exceptions (RuntimeException)
+   └── Error
+         ├── OutOfMemoryError
+         ├── StackOverflowError
+         └── InternalError
+
+
+✅ Handling Exceptions
+
+    try-catch block
+
+
+    try {
+        int a =     int a = 10 / 0;
+    } catch (ArithmeticException e) {
+        System.out.println("Cannot divide by zero!");
+    }
+
+
+    finally block
+    Always executes (used for cleanup).
+    throws keyword
+    Declares exceptions in method signature.
+    throw keyword
+    Used to explicitly throw an exception.
+
+
+✅ Common Exception Classes
+
+    ArithmeticException
+    NullPointerException
+    ArrayIndexOutOfBoundsException
+    IOException
+    ClassNotFoundException
+
+
+✅ Best Practices
+
+    Catch specific exceptions, not Exception blindly.
+    Avoid swallowing exceptions (always log or handle properly).
+    Use custom exceptions for business logic errors.
+
+--------------------
+Throw - Throw keyword is used to throw the exception with in the method
+
+Thows - “I’m not handling this exception here. I’ll just declare throws ClassNotFoundException so whoever calls me must handle it.”
+
+        Here we don't have "checkingclass", still we are trying to get the class in show method,
+        what show method is saying, i don't handle exception here i will just throws the exception to main, 
+        then main will handle exception with the help of try catch block
+
+throws is the Java keyword used in a method signature to declare that the method may throw certain exceptions.
+
+Ducking is the concept of not handling the exception in the current method and letting it propagate up the call stack (usually by using throws).        

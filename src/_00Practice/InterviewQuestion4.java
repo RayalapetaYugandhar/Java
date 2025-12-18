@@ -8,26 +8,6 @@
 
 package _00Practice;
 
-public class InterviewQuestion4 {
-
-    public static void main(String[] args) {
-
-        try {
-            // Creating Employee object with valid values
-            // If any value fails validation, an exception will be thrown
-            Employee emp = new Employee(10, "Raghu", 28);
-
-            // Printing the employee object
-            // This automatically calls toString() method
-            System.out.println(emp);
-
-        } catch (Exception e) {
-            // If validation fails, this block executes
-            System.out.println("Validation Failed: " + e.getMessage());
-        }
-    }
-}
-
 class Employee {
 
     // Private fields (data members) of Employee
@@ -65,3 +45,22 @@ class Employee {
     }
 }
 
+public class InterviewQuestion4 {
+
+    public static void main(String[] args) {
+
+        try {
+            // Creating Employee object with valid values
+            // If any value fails validation, an exception will be thrown
+            Employee emp = new Employee(10, "Raghu", 28);
+
+            // Printing the employee object
+            // This automatically calls toString() method
+            System.out.println(emp);
+
+        } catch (Exception e) {
+            // If validation fails, this block executes
+            System.out.println("Validation Failed: " + e.getMessage());
+        }
+    }
+}

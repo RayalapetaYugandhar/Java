@@ -1,0 +1,50 @@
+                                        types of interface
+                                                |
+                            Normal          Functional          Marker
+
+There are 3 types of interface we have 
+    1. Normal interface
+    2. Functional interface
+    3. Marker interface
+
+1. Normal Interface
+
+    An interface that can have any number of abstract methods.
+    Used to define a contract that implementing classes must follow.
+
+
+    interface Vehicle {  //interface
+        void start();    // implicitly public and abstract //abstract method public abstract void start();
+        void stop();
+    }
+
+    So you don’t need to explicitly write public abstract in an interface method declaration. 
+
+2. Functional Interface
+
+    An interface that has exactly one abstract method.
+    Can have default and static methods.
+    Used heavily in Lambda Expressions and Streams API.
+    Annotated with @FunctionalInterface (optional but recommended).
+
+
+    @FunctionalInterface
+    interface Calculator {
+        int add(int a, int b);
+    }
+
+    Calculator calc = (a, b) -> a + b;    
+
+3. Marker Interface
+
+    An interface with no methods (empty interface).
+    Used to mark or tag a class for special behavior.
+    Example: Serializable, Cloneable.
+
+    interface Marker {
+
+    }
+    class MyClass implements Marker {}
+
+    A Marker Interface in Java is an interface that does not declare any methods or fields. 
+    Its sole purpose is to mark or tag a class so that the JVM or frameworks can recognize that the class has a special property or should be treated differently.

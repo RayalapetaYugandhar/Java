@@ -1,0 +1,17 @@
+✅ Difference from throw:
+
+throw = actually throwing the exception inside the method.
+throws = declaring in the method signature that the method might throw exceptions.
+
+
+Throw - Throw keyword is used to throw the exception with in the method
+
+Thows - “I’m not handling this exception here. I’ll just declare throws ClassNotFoundException so whoever calls me must handle it.”
+
+        Here we don't have "checkingclass", still we are trying to get the class in show method,
+        what show method is saying, i don't handle exception here i will just throws the exception to main, 
+        then main will handle exception with the help of try catch block
+
+throws is the Java keyword used in a method signature to declare that the method may throw certain exceptions.
+
+Ducking is the concept of not handling the exception in the current method and letting it propagate up the call stack (usually by using throws).        
